@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="title desc">
+  <title id="title">Brango Connect</title>
+  <desc id="desc">Brango Connect logo with connected B icon</desc>
+  <defs>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9800"/><stop offset="1" stop-color="#ff5a00"/>
+    </linearGradient>
+    <linearGradient id="connect" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#147ff2"/><stop offset="1" stop-color="#16c7ce"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 8)">
+    <rect width="164" height="164" rx="38" fill="url(#orange)"/>
+    <path d="M48 38h58c21 0 36 12 36 30 0 12-7 22-18 27 14 5 23 16 23 31 0 22-17 36-41 36H48" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round"/>
+    <path d="M66 83h47M66 119h50" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round"/>
+    <path d="M20 83h43" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round"/>
+    <rect x="29" y="69" width="34" height="28" rx="7" fill="#fff"/>
+    <path d="M29 75H18M29 91H18" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="53" cy="39" r="13" fill="#168ff4" stroke="#fff" stroke-width="6"/>
+    <circle cx="53" cy="137" r="13" fill="#18c6d0" stroke="#fff" stroke-width="6"/>
+  </g>
+  <text x="205" y="79" font-family="Inter,Arial,sans-serif" font-size="67" font-weight="800" fill="#ff6500">Brango</text>
+  <text x="205" y="145" font-family="Inter,Arial,sans-serif" font-size="64" font-weight="760" fill="url(#connect)">Connect</text>
+</svg>
