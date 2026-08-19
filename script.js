@@ -7,3 +7,9 @@ function updateScreeningDemo(){if(!checks.length||!percent||!bar)return;const[co
 if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(updateScreeningDemo,2600);
 
 document.querySelectorAll('.faq-list details').forEach(item=>item.addEventListener('toggle',()=>{if(!item.open)return;document.querySelectorAll('.faq-list details').forEach(other=>{if(other!==item)other.open=false})}));
+
+const contactForm=document.getElementById('contact-form');
+const contactStatus=document.getElementById('form-status');
+const interestSelect=document.getElementById('contact-interest');
+if(interestSelect){const requestedInterest=new URLSearchParams(window.location.search).get('interest');if(requestedInterest&&[...interestSelect.options].some(option=>option.value===requestedInterest))interestSelect.value=requestedInterest;}
+if(contactForm){contactForm.addEventListener('submit',async event=>{event.preventDefault();const submitButton=contactForm.querySelector('button[type="submit"]');const originalText=submitButton?.innerHTML;if(submitButton){submitButton.disabled=true;submitButton.innerHTML='Sending…';}if(contactStatus){contactStatus.className='form-status';contactStatus.textContent='';}try{const response=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});if(response.ok){contactForm.reset();if(contactStatus){contactStatus.className='form-status success';contactStatus.textContent='Thank you. Your information was sent to Brango Connect and our team will follow up with you.';}}else{throw new Error('Form submission failed');}}catch(error){if(contactStatus){contactStatus.className='form-status error';contactStatus.innerHTML='We could not send the form. Please try again or email <a href="mailto:info@brangoconnect.com">info@brangoconnect.com</a>.';}}finally{if(submitButton){submitButton.disabled=false;submitButton.innerHTML=originalText;}}});}
