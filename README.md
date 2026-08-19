@@ -1,25 +1,23 @@
-# Brango Connect Website — Enhanced Concept
+# Brango Connect Website
 
-This package contains the enhanced Brango Connect single-page website concept.
+Brango Connect is positioned as a business-opportunity platform for entrepreneurs and background-check sales professionals who want to launch and grow their own branded background screening company.
+
+## Core positioning
+- Main site: owning and growing a background check business
+- Technology page: white-label portal, ATS/HRIS integrations, API workflows, webhooks and browser candidate capture
+- Brand name used site-wide: Brango Connect
+- Contact email: info@brangoconnect.com
 
 ## Files
-- `index.html` — page structure and website copy
-- `styles.css` — responsive design and all visual animation
-- `script.js` — navigation, scroll reveals and live screening-demo animation
-- `assets/brango-connect-logo.png` — Brango Connect logo supplied by the client
-- `assets/brango-icon.png` — Brango icon / favicon
-
-## Open locally
-Open `index.html` in a modern browser.
-
-## Design direction
-The website positions Brango Connect as the full connected background-screening platform, not only the browser extension. The extension is presented as one candidate-intake path alongside direct portal entry and ATS/HRIS/API integrations.
-
-The animated visuals are intentionally background-check specific: candidate screening progress, identity, county criminal searches, drug testing, ATS sync, screening orders, status events, webhooks, reports and affiliate performance.
+- `index.html` — business opportunity homepage
+- `technology.html` — technology and integration capabilities
+- `styles.css` — primary responsive design and animations
+- `brand-overrides.css` — Brango Connect supplied-logo lockup styling
+- `script.js` — navigation, reveals and animated workflow states
+- `assets/brango-connect-icon.png` — supplied Brango Connect icon used across the site
 
 ## Next production steps
-1. Convert the concept into the production framework/repository.
-2. Replace mailto CTAs with the production demo/application forms.
-3. Add legal/privacy/FCRA content and final approved claims.
-4. Connect analytics and CRM/form routing.
-5. Perform accessibility, performance, SEO and cross-browser QA before launch.
+1. Replace mailto CTAs with the production lead/application form.
+2. Add approved legal, privacy, FCRA and earnings-disclosure content.
+3. Connect analytics and lead routing.
+4. Perform accessibility, performance, SEO and cross-browser QA before launch.
