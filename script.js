@@ -42,3 +42,24 @@ const contactStatus=document.getElementById('form-status');
 const interestSelect=document.getElementById('contact-interest');
 if(interestSelect){const requestedInterest=new URLSearchParams(window.location.search).get('interest');if(requestedInterest&&[...interestSelect.options].some(option=>option.value===requestedInterest))interestSelect.value=requestedInterest;}
 if(contactForm){contactForm.addEventListener('submit',async event=>{event.preventDefault();const submitButton=contactForm.querySelector('button[type="submit"]');const originalText=submitButton?.innerHTML;if(submitButton){submitButton.disabled=true;submitButton.innerHTML='Sending…';}if(contactStatus){contactStatus.className='form-status';contactStatus.textContent='';}try{const response=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});if(response.ok){contactForm.reset();if(contactStatus){contactStatus.className='form-status success';contactStatus.textContent='Thank you. Your information was sent to Brango Connect and our team will follow up with you.';}}else{throw new Error('Form submission failed');}}catch(error){if(contactStatus){contactStatus.className='form-status error';contactStatus.innerHTML='We could not send the form. Please try again or email <a href="mailto:info@brangoconnect.com">info@brangoconnect.com</a>.';}}finally{if(submitButton){submitButton.disabled=false;submitButton.innerHTML=originalText;}}});}
+
+/* Interactive launch path: curtain-reveal behavior adapted to this site's native HTML/CSS/JS stack. */
+if(!document.querySelector('link[href="launch-curtain.css"]')){const launchStyles=document.createElement('link');launchStyles.rel='stylesheet';launchStyles.href='launch-curtain.css';document.head.appendChild(launchStyles);}
+const launchGrid=document.querySelector('#launch .timeline-grid');
+if(launchGrid){
+  const launchSteps=[
+    {step:'01',days:'DAYS 1–3',word:'BUILD',sub:'THE GAME PLAN',title:'Build the Game Plan',items:['Choose your first target niche.','Outline pricing and revenue targets.','Create a simple written launch plan.'],image:'assets/launch-step-1.svg',alt:'Build the Game Plan launch roadmap illustration'},
+    {step:'02',days:'WEEK 1–2',word:'LAUNCH',sub:'YOUR BRAND + PORTAL',title:'Launch Your Brand + Portal',items:['Configure your white-label portal.','Set up vendors and workflows behind the scenes.','Prepare a live branded dashboard for demos.'],image:'assets/launch-step-2.svg',alt:'Launch your brand and portal illustration'},
+    {step:'03',days:'WEEK 2–3',word:'BUILD',sub:'YOUR PIPELINE',title:'Build Your Pipeline',items:['Build a list of ideal prospects.','Use proven outreach scripts and demo flow.','Set up intake and follow-up templates.'],image:'assets/launch-step-3.svg',alt:'Build your sales pipeline illustration'},
+    {step:'04',days:'WEEK 3–12',word:'RUN',sub:'DEMOS + SCALE',title:'Run Demos + Scale',items:['Get support through your first demos.','Refine your pitch and pricing.','Scale outreach toward recurring revenue.'],image:'assets/launch-step-4.svg',alt:'Run demos and scale recurring revenue illustration'}
+  ];
+  launchGrid.insertAdjacentHTML('beforebegin','<div class="launch-curtain-hint"><i></i><span>Hover a step to open it — tap on mobile</span></div>');
+  launchGrid.className='launch-curtain-grid';
+  launchGrid.innerHTML=launchSteps.map(step=>`<article class="launch-curtain-card" tabindex="0" role="button" aria-expanded="false" aria-label="Open ${step.title}"><div class="launch-card-back"><div class="launch-back-top"><span class="launch-days">${step.days}</span><span class="launch-step-badge">${step.step}</span></div><h3>${step.title}</h3><ul>${step.items.map(item=>`<li>${item}</li>`).join('')}</ul><div class="launch-step-art"><img src="${step.image}" alt="${step.alt}" loading="lazy"></div></div><div class="launch-front" aria-hidden="true"><div class="launch-front-top"><span class="launch-front-label">STEP ${step.step}</span><span class="launch-front-number">${step.step}</span></div><div class="launch-front-word">${step.word}<span class="launch-front-sub">${step.sub}</span></div><div class="launch-front-bottom"><small>${step.days}</small><span class="launch-open-pill"><i></i> OPEN STEP ↗</span></div></div></article>`).join('');
+  const launchCards=[...launchGrid.querySelectorAll('.launch-curtain-card')];
+  const setLaunchOpen=(card,open)=>{card.classList.toggle('is-open',open);card.setAttribute('aria-expanded',String(open));};
+  launchCards.forEach(card=>{
+    card.addEventListener('click',()=>{const willOpen=!card.classList.contains('is-open');launchCards.forEach(other=>{if(other!==card)setLaunchOpen(other,false)});setLaunchOpen(card,willOpen);});
+    card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();card.click();}});
+  });
+}
