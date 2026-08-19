@@ -1,6 +1,9 @@
 /* Brango Connect brand lockup overrides — uses the supplied icon site-wide. */
 .brand-lockup{display:inline-flex;align-items:center;gap:12px;text-decoration:none;line-height:1;flex-shrink:0}.brand-lockup img{width:48px!important;height:48px!important;object-fit:contain;display:block;flex:0 0 48px}.brand-words{display:flex;flex-direction:column;align-items:flex-start;line-height:.84;letter-spacing:-1.4px}.brand-words strong{font-size:30px;font-weight:850;font-style:normal;color:#ff6500}.brand-words em{margin-top:7px;font-size:27px;font-weight:800;font-style:normal;background:linear-gradient(90deg,#147ff2,#16c7ce);-webkit-background-clip:text;background-clip:text;color:transparent}.footer-lockup img{width:54px!important;height:54px!important;flex-basis:54px}.footer-lockup .brand-words strong{font-size:32px}.footer-lockup .brand-words em{font-size:29px}.core-logo-image img{width:64px;height:70px;object-fit:contain;margin-bottom:8px}.integration-center-brand{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:4px}.integration-center-brand img{width:78px!important;height:86px!important;object-fit:contain}.integration-center-brand strong{font-size:16px;line-height:1;color:#172333}.contact-email{margin:18px auto 0;text-align:center;color:#637184;font-size:14px}.contact-email a{color:#168ff4;font-weight:700;text-decoration:none}
 
+/* Keep the black top bar as a clean visual strip, with no text or links. */
+.topbar-inner>*{display:none!important}
+
 /* Motivational FAQ conversion CTAs */
 .faq-list details>p{line-height:1.7}.faq-cta{display:flex!important;width:max-content;margin-top:18px;text-decoration:none!important}.faq-list details[open] .faq-cta{animation:faqCtaIn .25s ease both}@keyframes faqCtaIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 
