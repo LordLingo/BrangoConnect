@@ -1,0 +1,31 @@
+/* Brango Connect Privacy Policy */
+.privacy-hero{position:relative;overflow:hidden;padding:82px 0 58px;background:linear-gradient(180deg,#fff 0%,#f7fbff 100%);border-bottom:1px solid #e7edf4}
+.privacy-hero:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;right:-180px;top:-300px;background:radial-gradient(circle,rgba(20,127,242,.12),rgba(20,127,242,0) 68%);pointer-events:none}
+.privacy-hero .shell{position:relative;z-index:1}
+.privacy-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.16em;font-weight:900;color:#147ff2}
+.privacy-hero h1{max-width:780px;margin:14px 0 16px;font-size:clamp(46px,6vw,72px);line-height:1;letter-spacing:-.05em}
+.privacy-hero p{margin:0;color:#66758a;font-size:16px}
+.privacy-body{padding:70px 0 110px}
+.privacy-layout{display:grid;grid-template-columns:minmax(0,1fr);max-width:920px}
+.privacy-section{padding:32px 0;border-bottom:1px solid #e8eef5}
+.privacy-section:first-child{padding-top:0}
+.privacy-section:last-child{border-bottom:0}
+.privacy-section h2{margin:0 0 16px;font-size:28px;line-height:1.2;letter-spacing:-.03em;color:#17202d}
+.privacy-section p,.privacy-section li{font-size:15px;line-height:1.8;color:#5f6f84}
+.privacy-section p{margin:0 0 14px}
+.privacy-section ul{margin:10px 0 0;padding-left:22px}
+.privacy-section li{margin:8px 0}
+.privacy-section strong{color:#253246}
+.privacy-section a{color:#147ff2;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.privacy-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid #dfe8f2;border-radius:18px;background:#fff;box-shadow:0 12px 34px rgba(30,55,80,.05)}
+.privacy-table{width:100%;border-collapse:collapse;min-width:760px}
+.privacy-table th,.privacy-table td{padding:16px 18px;text-align:left;vertical-align:top;border-bottom:1px solid #e9eef4;font-size:13px;line-height:1.65}
+.privacy-table th{background:#f6f9fc;color:#27364a;font-size:12px;letter-spacing:.02em}
+.privacy-table td{color:#637287}
+.privacy-table tr:last-child td{border-bottom:0}
+.privacy-note{padding:18px 20px;border-radius:16px;background:#f3f8ff;border:1px solid #dceaf8}
+.privacy-contact{display:grid;gap:8px;padding:22px;border-radius:18px;background:#07111f;color:#fff}
+.privacy-contact p{color:#b9c7d6;margin:0}
+.privacy-contact a{color:#79c6ff}
+.privacy-back{margin-top:26px}
+@media(max-width:650px){.privacy-hero{padding:58px 0 42px}.privacy-body{padding:48px 0 80px}.privacy-section{padding:26px 0}.privacy-section h2{font-size:24px}.privacy-section p,.privacy-section li{font-size:14px}}
