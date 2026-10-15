@@ -66,3 +66,7 @@ if(launchGrid){
     card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();card.click();}});
   });
 }
+
+
+/* Ensure Privacy Policy is available from the footer site-wide. */
+document.querySelectorAll('footer .footer-grid').forEach(footerGrid=>{if(footerGrid.querySelector('a[href="privacy.html"]'))return;const columns=[...footerGrid.children].filter(el=>!el.classList.contains('footer-brand'));const target=columns[columns.length-1];if(target){const privacyLink=document.createElement('a');privacyLink.href='privacy.html';privacyLink.textContent='Privacy Policy';const emailLink=[...target.querySelectorAll('a')].find(a=>a.href.startsWith('mailto:'));if(emailLink)target.insertBefore(privacyLink,emailLink);else target.appendChild(privacyLink);}});
