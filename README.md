@@ -5,7 +5,7 @@ Brango Connect is positioned as a business-opportunity platform for entrepreneur
 ## Core positioning
 - Main site: owning and growing a background check business
 - Back office: Brango answers client calls and emails, processes the full background check, and routes every order through one portal
-- Commercial model: no upfront fee and no fixed startup price. Brango earns a per-search fee plus a monthly revenue share of 7%, 12%, or 15% depending on volume
+- Partnership terms are not published. The site says those details are discussed on a call.
 - Go Independent page: for people who already sell background checks and want to own the client relationship
 - Technology page: white-label portal, ATS/HRIS integrations, API workflows, webhooks and browser candidate capture
 - Brand name used site-wide: Brango Connect

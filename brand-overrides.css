@@ -45,8 +45,9 @@
 @media(max-width:650px){.form-grid{grid-template-columns:1fr}.form-wide{grid-column:auto}.contact-form-card{padding:26px 20px;border-radius:18px}.contact-copy h2{letter-spacing:-1.6px}.contact-section{padding:68px 0}.faq-cta{width:100%;justify-content:center;text-align:center}}
 @media(max-width:560px){.brand-lockup img{width:36px!important;height:36px!important;flex-basis:36px}.brand-words strong{font-size:21px}.brand-words em{font-size:19px;margin-top:4px}}
 
-/* Tighter desktop nav so Go Independent fits the existing pill. */
-@media(min-width:1021px){
+/* Tighter desktop nav so the affiliate button fits the existing pill. */
+@media(min-width:1280px){
+  .site-header .shell{width:min(1280px,calc(100% - 28px))}
   .main-nav{gap:1px;padding:5px;font-size:12px}
   .main-nav>a:not(.button){padding:10px 8px}
   .main-nav .button{margin-left:3px;padding:11px 12px;font-size:11.5px}
@@ -63,6 +64,7 @@
 .model-tier strong{font-size:44px;line-height:1;letter-spacing:-.045em}
 .model-tier span{color:#d5e8f4;font-size:14px;line-height:1.4;text-align:right;max-width:220px}
 .model-note{margin:16px 4px 0;color:#c5dbe8;font-size:13px;line-height:1.65}
+.model-callout{margin:28px 4px 8px;font-size:clamp(26px,3vw,34px);line-height:1.28;letter-spacing:-.03em;font-weight:800}
 
 .industry-card>a,.industry-card>a:hover{position:static;display:inline-block;margin-top:18px;font-size:13px;font-weight:800;letter-spacing:0;color:#147ff2}
 

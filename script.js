@@ -24,16 +24,16 @@ const faqContent=[
     cta:'See the Back Office'
   },
   {
-    question:'Is there an upfront fee?',
-    answer:'No. There is no upfront fee and no fixed startup price. Brango earns a fee on each search, plus a monthly revenue share of 7%, 12%, or 15%, depending on volume. That share is what Brango earns.',
+    question:'When are the details discussed?',
+    answer:'On a call. Apply to become an affiliate and Brango will walk through how the partnership works.',
     href:'#model',
-    cta:'See the Model'
+    cta:'See the Next Step'
   },
   {
     question:'Whose brand does the client see?',
     answer:'Your company stays in front of the client. Brango powers the portal and runs the back office behind it.',
     href:'#contact',
-    cta:'Apply — No Upfront Fee'
+    cta:'Apply to Become an Affiliate'
   },
   {
     question:'What if I already sell background checks for someone else?',
@@ -55,10 +55,10 @@ if(!document.querySelector('link[href="launch-curtain.css"]')){const launchStyle
 const launchGrid=document.querySelector('#launch .timeline-grid');
 if(launchGrid){
   const launchSteps=[
-    {step:'01',days:'DAYS 1–3',word:'BUILD',sub:'THE GAME PLAN',title:'Build the Game Plan',items:['Choose your first target niche.','Outline pricing and revenue targets.','Create a simple written launch plan.'],image:'assets/launch-step-1.svg',alt:'Build the Game Plan launch roadmap illustration'},
+    {step:'01',days:'DAYS 1–3',word:'BUILD',sub:'THE GAME PLAN',title:'Build the Game Plan',items:['Choose your first target niche.','Outline the clients you want to reach.','Create a simple written launch plan.'],image:'assets/launch-step-1.svg',alt:'Build the Game Plan launch roadmap illustration'},
     {step:'02',days:'WEEK 1–2',word:'LAUNCH',sub:'YOUR BRAND + PORTAL',title:'Launch Your Brand + Portal',items:['Configure your white-label portal.','Set up vendors and workflows behind the scenes.','Prepare a live branded dashboard for demos.'],image:'assets/launch-step-2.svg',alt:'Launch your brand and portal illustration'},
     {step:'03',days:'WEEK 2–3',word:'SCALE',sub:'YOUR PIPELINE',title:'Build Your Pipeline',items:['Build a list of ideal prospects.','Use proven outreach scripts and demo flow.','Set up intake and follow-up templates.'],image:'assets/launch-step-3.svg',alt:'Build your sales pipeline illustration'},
-    {step:'04',days:'WEEK 3–12',word:'RUN',sub:'DEMOS + SCALE',title:'Run Demos + Scale',items:['Get support through your first demos.','Refine your pitch and pricing.','Scale outreach toward repeat client orders.'],image:'assets/launch-step-4.svg',alt:'Run demos and scale client outreach illustration'}
+    {step:'04',days:'WEEK 3–12',word:'RUN',sub:'DEMOS + SCALE',title:'Run Demos + Scale',items:['Get support through your first demos.','Refine your pitch.','Scale outreach and build a client base.'],image:'assets/launch-step-4.svg',alt:'Run demos and scale client outreach illustration'}
   ];
   launchGrid.insertAdjacentHTML('beforebegin','<div class="launch-curtain-hint"><i></i><span>Hover a step to open it — tap on mobile</span></div>');
   launchGrid.className='launch-curtain-grid';
