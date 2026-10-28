@@ -1,28 +1,37 @@
 # Brango Connect Website
 
-Brango Connect is positioned as a business-opportunity platform for entrepreneurs and background-check sales professionals who want to launch and grow their own branded background screening company.
+Brango Connect is a business-opportunity site for people who already sell background checks, and for B2B entrepreneurs who want to own a background check company.
 
 ## Core positioning
-- Main site: owning and growing a background check business
-- Back office: Brango answers client calls and emails, processes the full background check, and routes every order through one portal
+- You own the company and the client relationships.
+- Brango runs the back office: calls and emails, the full background check, and one software portal.
 - Partnership terms are not published. The site says those details are discussed on a call.
-- Go Independent page: for people who already sell background checks and want to own the client relationship
-- Technology page: white-label portal, ATS/HRIS integrations, API workflows, webhooks and browser candidate capture
-- Brand name used site-wide: Brango Connect
-- Contact email: info@brangoconnect.com
-- Earnings figures stay off the site until Mark verifies them. Do not add analytics in this pass.
+- Do not publish fees, prices, per-search charges, revenue share, percentages, or earnings figures.
+- Confirmed facts used on the site: 25+ years of experience, 50 affiliates, the back-office scope above, and info@brangoconnect.com.
+- Go Independent page: for people who already sell background checks.
+- About page: those same facts, with no biographies.
+- Technology page: white-label portal, ATS/HRIS integrations, API workflows, webhooks and browser candidate capture.
+
+## Lead path
+- Short Formspree form (name, email, optional phone, optional message) in the hero and again lower on the page.
+- Submitting redirects to `thank-you.html`, which explains the email reply and links to the guide.
+- Guide: `guide.html` — “How to go independent in background screening.” Printable. Public URL; the form is the intended delivery, not a login gate.
+- Sticky apply bar after the hero form leaves the screen.
 
 ## Files
-- `index.html` — business opportunity homepage
+- `index.html` — homepage
 - `go-independent.html` — page for background-check salespeople
+- `about.html` — facts only
+- `guide.html` — 1-page guide
+- `thank-you.html` — post-submit expectations (`noindex`)
 - `technology.html` — technology and integration capabilities
-- `styles.css` — primary responsive design and animations
-- `brand-overrides.css` — Brango Connect supplied-logo lockup styling
-- `script.js` — navigation, reveals and animated workflow states
-- `assets/brango-connect-icon.png` — supplied Brango Connect icon used across the site
+- `privacy.html` — privacy policy
+- `styles.css`, `brand-overrides.css`, `lead.css`, `launch-curtain.css`
+- `script.js` — menu, reveals, dashboard animation, form redirect, sticky bar. It does not rewrite marketing copy.
+- `sitemap.xml`, `robots.txt`
+- `assets/og-image.png` — link-preview image
 
-## Next production steps
-1. Replace mailto CTAs with the production lead/application form.
-2. Add any further approved legal, privacy, and FCRA content. Earnings figures stay unpublished until verified.
-3. Analytics and extra lead-routing are intentionally not connected yet.
-4. Perform accessibility, performance, SEO and cross-browser QA before launch.
+## Still needs a person
+1. Enable Vercel Web Analytics on the project, or the `/_vercel/insights/script.js` request 404s.
+2. In Formspree, allow the redirect to `https://brangoconnect.com/thank-you.html` if the project requires an allow-list. With JavaScript on, the site redirects itself after a successful POST.
+3. Earnings figures stay off the site until Mark verifies any number he wants published.
