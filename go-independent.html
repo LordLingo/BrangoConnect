@@ -4,7 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Go Independent | Brango Connect</title>
-  <meta name="description" content="For people who already sell background checks. Own the client relationship while Brango answers calls and emails, processes the full check, and routes every order through one portal.">
+  <meta name="description" content="For people who already sell background checks. Own the client relationship. Brango answers calls and emails, processes the full check, and routes every order through one portal.">
+  <link rel="canonical" href="https://brangoconnect.com/go-independent.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Brango Connect">
+  <meta property="og:title" content="Go Independent | Brango Connect">
+  <meta property="og:description" content="Stop growing someone else's book. Own the client relationship while Brango runs the back office.">
+  <meta property="og:url" content="https://brangoconnect.com/go-independent.html">
+  <meta property="og:image" content="https://brangoconnect.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Brango Connect. Own the company. We run the back office.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Go Independent | Brango Connect">
+  <meta name="twitter:description" content="Stop growing someone else's book. Own the client relationship while Brango runs the back office.">
+  <meta name="twitter:image" content="https://brangoconnect.com/assets/og-image.png">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/brango-connect-icon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/brango-connect-icon.png">
@@ -13,14 +28,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="brand-overrides.css">
+  <link rel="stylesheet" href="lead.css">
+  <!-- Analytics: Vercel Web Analytics. Enable it in the Vercel project (Analytics tab).
+       Placeholder: [data-analytics] on links is ready for another vendor. None is configured. -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-  <div class="topbar">
-    <div class="shell topbar-inner">
-      <span><i class="live-dot"></i> Your brand • Your clients • Brango runs the back office</span>
-      <a href="index.html#contact">Apply to Become an Affiliate <b>→</b></a>
-    </div>
-  </div>
+  <div class="topbar"><div class="shell topbar-inner"></div></div>
 
   <header class="site-header" id="top">
     <div class="shell nav-wrap">
@@ -30,14 +47,13 @@
       </a>
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
       <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
-        <a href="index.html#why">Why This Business</a>
-        <a href="index.html#included">What's Included</a>
-        <a href="index.html#model">On a Call</a>
-        <a href="index.html#launch">How It Works</a>
+        <a href="index.html#who">Who It's For</a>
+        <a href="index.html#how">How It Works</a>
         <a href="go-independent.html" aria-current="page">Go Independent</a>
         <a href="technology.html">Technology</a>
-        <a href="index.html#contact">Contact</a>
-        <a class="button button-small button-primary" href="index.html#contact">Apply to Become an Affiliate</a>
+        <a href="about.html">About</a>
+        <a href="#faq">FAQ</a>
+        <a class="button button-small button-primary" href="#apply" data-analytics="nav-apply">Apply to Become an Affiliate</a>
       </nav>
     </div>
   </header>
@@ -46,14 +62,28 @@
     <section class="hero">
       <div class="hero-grid"></div><div class="hero-glow glow-blue"></div><div class="hero-glow glow-orange"></div>
       <div class="shell hero-layout">
-        <div class="hero-copy reveal">
+        <div class="hero-copy">
           <div class="eyebrow"><i class="live-dot"></i> FOR PEOPLE WHO ALREADY SELL BACKGROUND CHECKS</div>
           <h1>Stop growing<br>someone else's business.<br><span>Own your own.</span></h1>
-          <p>If you sell background checks for a company you do not own, the client relationship stays there. Brango Connect puts your company in front of the client. Brango runs the back office. The details are discussed on a call.</p>
-          <blockquote class="quote-line">If you already sell screening, this gives you a path to build equity in your own client base instead of only earning commission for someone else.</blockquote>
-          <div class="hero-actions">
-            <a class="button button-primary button-large" href="index.html#contact">Apply to Become an Affiliate <b>→</b></a>
-            <a class="button button-secondary button-large" href="#how">See How It Works</a>
+          <p>If you sell background checks for a company you do not own, the client relationship stays there. Brango puts your company in front of the client and runs the back office.</p>
+          <div class="hero-form-card" id="apply">
+            <p class="guide-line">Apply with your email and the next page includes the 1-page guide: <b>How to go independent in background screening.</b></p>
+            <form class="js-lead-form hero-form" action="https://formspree.io/f/xgawroga" method="POST">
+              <input type="hidden" name="_subject" value="New Brango Connect affiliate application">
+              <input type="hidden" name="_next" value="https://brangoconnect.com/thank-you.html">
+              <input type="hidden" name="source" value="Go Independent hero">
+              <input type="hidden" name="guide" value="How to go independent in background screening">
+              <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="form-grid">
+                <label><span>Name *</span><input type="text" name="name" autocomplete="name" required></label>
+                <label><span>Email *</span><input type="email" name="email" autocomplete="email" required></label>
+                <label><span>Phone <em class="optional-mark">optional</em></span><input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
+                <label><span>Message <em class="optional-mark">optional</em></span><input type="text" name="message" placeholder="Optional note"></label>
+              </div>
+              <button class="button button-primary button-large form-submit" type="submit">Apply to Become an Affiliate <b>→</b></button>
+              <p class="next-steps">What happens next: Brango sends a short email reply to set up a call. Partnership details are discussed on that call.</p>
+              <div class="form-status" role="status" aria-live="polite"></div>
+            </form>
           </div>
         </div>
         <div class="ownership-card reveal">
@@ -64,7 +94,6 @@
             <li><i>✓</i><span>Brango answers the calls and emails.</span></li>
             <li><i>✓</i><span>Brango processes the full background check.</span></li>
             <li><i>✓</i><span>Every order goes through one software portal.</span></li>
-            <li><i>✓</i><span>The details are discussed on a call.</span></li>
           </ul>
         </div>
       </div>
@@ -74,17 +103,18 @@
     <section class="section" id="ownership">
       <div class="shell">
         <div class="section-heading centered reveal">
-          <span class="kicker">OWNERSHIP, NOT ANOTHER COMMISSION PLAN</span>
+          <span class="kicker">OWNERSHIP</span>
           <h2>The difference is who the client belongs to.</h2>
           <p>Selling screening is the skill. The change is that the relationship, the brand, and the book you build from here can belong to your company.</p>
         </div>
-        <div class="compare-grid">
+        <blockquote class="quote-line reveal">If you already sell screening, this gives you a path to build equity in your own client base instead of only earning commission for someone else.</blockquote>
+        <div class="compare-grid spaced">
           <article class="compare-card reveal">
             <div class="compare-label">SELLING FOR SOMEONE ELSE</div>
-            <h3>Commission on a book you do not own.</h3>
+            <h3>The book stays with that company.</h3>
             <ul>
               <li><i>—</i><span>The client relationship belongs to the company you sell for.</span></li>
-              <li><i>—</i><span>You are paid to sell. The accounts stay behind when you leave.</span></li>
+              <li><i>—</i><span>The accounts stay behind when you leave.</span></li>
               <li><i>—</i><span>Calls, fulfillment, and the portal are that company's system.</span></li>
             </ul>
           </article>
@@ -93,9 +123,9 @@
             <h3>A client base with your name on it.</h3>
             <ul>
               <li><i>✓</i><span>Your company owns the client relationship.</span></li>
-              <li><i>✓</i><span>You build equity in your own client base instead of only earning commission for someone else.</span></li>
+              <li><i>✓</i><span>You build the book under your brand.</span></li>
               <li><i>✓</i><span>Brango answers calls and emails, processes the full check, and routes every order through one portal.</span></li>
-              <li><i>✓</i><span>The details of the partnership are discussed on a call.</span></li>
+              <li><i>✓</i><span>How the partnership works is discussed on a call.</span></li>
             </ul>
           </article>
         </div>
@@ -110,7 +140,7 @@
           <p>You do not start by building software or hiring a fulfillment team. You start a conversation, then sell under your own brand.</p>
         </div>
         <div class="timeline-grid">
-          <article class="timeline-card reveal"><span>STEP 01</span><b>01</b><h3>Apply and talk</h3><ul><li>Send your name and email. Phone and a note are optional.</li><li>The details are discussed on a call.</li><li>We look at your sales background and the market you want to serve.</li></ul></article>
+          <article class="timeline-card reveal"><span>STEP 01</span><b>01</b><h3>Apply and talk</h3><ul><li>Send your name and email. Phone and a note are optional.</li><li>Brango replies by email to set up a call.</li><li>The partnership details are discussed on that call.</li></ul></article>
           <article class="timeline-card reveal"><span>STEP 02</span><b>02</b><h3>Put your brand on the portal</h3><ul><li>Your company stays in front of the client.</li><li>Every order is routed through one software portal.</li><li>You are not assembling separate systems.</li></ul></article>
           <article class="timeline-card reveal"><span>STEP 03</span><b>03</b><h3>Sell the way you already know</h3><ul><li>Prospect, demo, and keep the relationship.</li><li>The clients you win for your company belong to your company.</li><li>You stay on the sales side of the work.</li></ul></article>
           <article class="timeline-card reveal"><span>STEP 04</span><b>04</b><h3>Brango runs the back office</h3><ul><li>Brango answers client calls and emails.</li><li>Brango processes the full background check.</li><li>You do not staff fulfillment to open the business.</li></ul></article>
@@ -118,32 +148,21 @@
       </div>
     </section>
 
-    <section class="section" id="call">
-      <div class="shell">
-        <div class="section-heading centered reveal">
-          <span class="kicker">FIRST CONVERSATION</span>
-          <h2>The details are discussed on a call.</h2>
-          <p>How the partnership works is covered in a first conversation. Apply to become an affiliate, and Brango will walk through it with you.</p>
-        </div>
-        <p class="center-link reveal"><a class="button button-primary button-large" href="index.html#contact">Apply to Become an Affiliate →</a></p>
-      </div>
-    </section>
-
-    <section class="section section-soft faq-section" id="faq">
+    <section class="section faq-section" id="faq">
       <div class="shell faq-layout">
         <div class="faq-copy reveal">
           <span class="kicker">QUESTIONS FROM SALES</span>
           <h2>What people who already sell screening usually ask.</h2>
-          <p>The short version: you own the client relationship, and Brango runs the back office. The details are discussed on a call.</p>
+          <p>You own the client relationship. Brango runs the back office. The details are discussed on a call.</p>
         </div>
         <div class="faq-list reveal">
           <details open>
             <summary>Do I have to leave my job to apply?<span>+</span></summary>
-            <p>No. Applying starts a conversation. Sending the form is not a resignation. The details are discussed on a call.</p>
+            <p>No. Applying starts a conversation. Sending the form is not a resignation.</p>
           </details>
           <details>
-            <summary>When are the details discussed?<span>+</span></summary>
-            <p>On a call. Apply to become an affiliate and Brango will walk through how the partnership works.</p>
+            <summary>What happens after I apply?<span>+</span></summary>
+            <p>Brango sends a short email reply to set up a call. Partnership details are discussed on that call. The thank-you page has the 1-page guide.</p>
           </details>
           <details>
             <summary>Who answers client calls and emails?<span>+</span></summary>
@@ -165,21 +184,33 @@
       </div>
     </section>
 
-    <section class="cta-section page-cta" id="apply">
-      <div class="shell">
-        <div class="cta-card reveal">
-          <div class="cta-ring ring-1"></div><div class="cta-ring ring-2"></div>
-          <div>
-            <span class="kicker kicker-light">START WITH A CONVERSATION</span>
-            <h2>Apply to become an affiliate.</h2>
-            <p>Tell us your name and email. If you already sell background checks, say so in the optional message. We can walk through ownership and the back office. The details are discussed on a call.</p>
-          </div>
-          <div class="cta-actions">
-            <a class="button button-white button-large" href="index.html#contact">Apply to Become an Affiliate →</a>
-            <a class="button button-ghost button-large" href="index.html#back-office">See the Back Office</a>
-          </div>
+    <section class="section contact-section" id="contact">
+      <div class="shell contact-layout">
+        <div class="contact-copy reveal">
+          <span class="kicker">APPLY</span>
+          <h2>If you already sell screening, say so.</h2>
+          <p>Name and email are enough. Use the optional note if you want to mention the market you sell into. Brango replies by email to set up a call.</p>
+          <p class="contact-direct">Prefer email? <a href="mailto:info@brangoconnect.com">info@brangoconnect.com</a></p>
         </div>
-        <p class="contact-email">Prefer email? <a href="mailto:info@brangoconnect.com">info@brangoconnect.com</a></p>
+        <div class="contact-form-card reveal">
+          <form class="js-lead-form" action="https://formspree.io/f/xgawroga" method="POST">
+            <input type="hidden" name="_subject" value="New Brango Connect affiliate application">
+            <input type="hidden" name="_next" value="https://brangoconnect.com/thank-you.html">
+            <input type="hidden" name="source" value="Go Independent bottom">
+            <input type="hidden" name="guide" value="How to go independent in background screening">
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form-grid">
+              <label class="form-wide"><span>Name *</span><input type="text" name="name" autocomplete="name" required></label>
+              <label><span>Email *</span><input type="email" name="email" autocomplete="email" required></label>
+              <label><span>Phone <em class="optional-mark">optional</em></span><input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
+              <label class="form-wide"><span>Message <em class="optional-mark">optional</em></span><textarea name="message" rows="3" placeholder="Optional. A few sentences is enough."></textarea></label>
+            </div>
+            <button class="button button-primary button-large form-submit" type="submit">Apply to Become an Affiliate <b>→</b></button>
+            <p class="next-steps">What happens next: a short email reply to set up a call. You'll also get the 1-page guide.</p>
+            <p class="form-privacy">Please don't include Social Security numbers or other sensitive candidate data.</p>
+            <div class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -193,11 +224,15 @@
         </a>
         <p>For people who already sell background checks and want the client relationship to be theirs.</p>
       </div>
-      <div><b>Business Opportunity</b><a href="index.html#why">Why Background Checks</a><a href="index.html#included">What's Included</a><a href="index.html#back-office">The Back Office</a><a href="index.html#model">On a Call</a><a href="go-independent.html">Go Independent</a><a href="index.html#launch">Launch Process</a></div>
-      <div><b>Brango Connect</b><a href="technology.html">Technology & Integrations</a><a href="#faq">FAQ</a><a href="index.html#contact">Contact Us</a><a href="privacy.html">Privacy Policy</a><a href="mailto:info@brangoconnect.com">info@brangoconnect.com</a></div>
+      <div><b>Business Opportunity</b><a href="index.html#who">Who It's For</a><a href="index.html#how">How It Works</a><a href="go-independent.html">Go Independent</a><a href="#apply">Apply</a></div>
+      <div><b>Brango Connect</b><a href="about.html">About</a><a href="technology.html">Technology</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy Policy</a><a href="mailto:info@brangoconnect.com">info@brangoconnect.com</a></div>
     </div>
     <div class="shell footer-bottom"><span>© 2026 Brango Connect. All rights reserved.</span><span>No earnings are guaranteed.</span></div>
   </footer>
+  <div class="apply-bar" data-apply-bar>
+    <p>Own the relationship. Brango runs the back office.</p>
+    <a class="button button-primary" href="#apply" data-analytics="apply-sticky">Apply to Become an Affiliate</a>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
