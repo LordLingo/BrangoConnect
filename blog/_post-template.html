@@ -9,7 +9,8 @@
     2. Replace POST_TITLE, POST_DESCRIPTION, POST_SLUG, POST_DATE_ISO, and POST_DATE_DISPLAY everywhere they appear, including the JSON-LD block.
     3. Replace the body copy. Keep the call-to-action box and the link back to the blog.
     4. On blog/index.html, copy the sample card, remove the sample marker, and point it at the new file.
-    5. When the post should appear in search, change robots below to index,follow and add the URL to sitemap.xml.
+    5. When the post should appear in search, change robots below to index,follow and add https://www.brangoconnect.com/blog/POST_SLUG.html to sitemap.xml.
+       Keep the .html extension on the canonical, og:url, JSON-LD URL, and sitemap loc. The site does not serve the extensionless path.
        Until then keep noindex, and leave the URL out of the sitemap.
     Copy rules: no pricing, fees, earnings, or revenue claims; no invented statistics; no competitor names; no phone number.
     Contact is info@brangoconnect.com.
