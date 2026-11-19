@@ -7,8 +7,9 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 - Brango runs the back office: calls and emails, the full background check, and one software portal.
 - Partnership terms are not published. The site says those details are discussed on a call.
 - Do not publish fees, prices, per-search charges, revenue share, percentages, or earnings figures.
-- Confirmed facts used on the site: 25+ years in background screening, 95% partner retention, 50 affiliates, the back-office scope above, and info@brangoconnect.com.
-- The one money fact allowed: Brango partner businesses have sold for 4–6X their yearly profit (EBITDA). It always carries the fine print: "Based on past sales of Brango partner businesses. Past results. Not a guarantee of future value." Never 3–5X. Never lead with it.
+- Confirmed facts used on the site: 25+ years in background screening, 50 affiliates, no affiliate has ever left, the back-office scope above, and info@brangoconnect.com.
+- Retention is written in words ("0 affiliates have ever left"), never as a percentage. Do not use "95%" or "100%". The videos still say 95% until they are re-recorded.
+- The one money fact allowed: Brango affiliates have sold books of business for 4–6X their yearly profit (EBITDA), and kept their companies. These were sales of client books, not of whole companies, so never write "partner businesses have sold". It always carries the fine print: "Based on past sales of books of business by Brango affiliates. Past results. Not a guarantee of future value." Never 3–5X. Never lead with it. No dollar amounts.
 - Brango is selective: "We don't license to everyone."
 - Say "license". Never describe the model as a franchise. "Brango" is the company. "Brango Connect" is the site and software name.
 - Booking link everywhere: https://calendar.app.google/HRjFjbsaZtN8QM1H8 (Google Calendar). Calendly is retired.
