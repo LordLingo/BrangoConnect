@@ -19,16 +19,17 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 - Technology page: white-label portal, ATS/HRIS integrations, API workflows, webhooks and browser candidate capture.
 
 ## Lead path
-- Short Formspree form (name, email, optional phone, optional message) in the hero and again lower on the page.
-- Submitting redirects to `thank-you.html`, which explains the email reply and links to the guide.
-- Guide: `guide.html` — “How to go independent in background screening.” Printable. Public URL; the form is the intended delivery, not a login gate.
-- Sticky apply bar after the hero form leaves the screen.
+- The goal of the homepage, Go Independent and Brokers is one action: **Book a call** (Google Calendar). Those three pages have no forms.
+- "Prefer email?" links to info@brangoconnect.com.
+- The Formspree application form still lives on `about.html` and `whats-included.html`. Submitting redirects to `thank-you.html`.
+- Older pages still link to `/#apply` and `/#contact`. Those anchors now sit on the homepage's closing "Book a call" section. Keep the ids `who`, `how`, `faq`, `clients`, `launch`, `apply`, `contact` on the homepage.
+- Guide: `guide.html` — "How to go independent in background screening." Printable, public URL.
 
 ## Files
-- `index.html` — homepage
+- `index.html` — homepage, in the campaign look (`campaign.css`). Ten screens, one idea each: hero with the "pieces" animation, proof, The Binder video, two paths, who it's for, industries, launch timeline, the 4–6X fact, five FAQs, closing call.
 - `go-independent.html` — campaign page for background-check salespeople
 - `brokers.html` — campaign page for business brokers
-- `campaign.css` — the new campaign-page design (one idea per screen, one button: Book a call). Used by `go-independent.html` and `brokers.html`. The hero's "pieces" animation is inline SVG driven by this file.
+- `campaign.css` — the new campaign-page design (one idea per screen, one button: Book a call). Used by `index.html`, `go-independent.html` and `brokers.html`. The inner pages (About, What's Included, Technology, Guide, Blog) still use the older stylesheets. The hero's "pieces" animation is inline SVG driven by this file.
 - `assets/video/` — self-hosted videos (720p), posters and captions. Fast Cut on Go Independent. The Binder on the homepage and Brokers.
 - `about.html` — facts only
 - `guide.html` — 1-page guide
