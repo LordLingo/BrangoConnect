@@ -10,6 +10,14 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 - Confirmed facts used on the site: 25+ years in background screening, 50 affiliates, no affiliate has ever left, the back-office scope above, and info@brangoconnect.com.
 - The number 50 is always framed as buying power ("50 companies buying as one", "the vendor pricing and turnaround of fifty companies"). Never "50 affiliates on the platform": it makes visitors ask how they would compete with the other affiliates. The FAQ answers that question directly.
 - Do not claim the lowest pricing or the fastest turnaround "in the industry" without a number Mark has supplied.
+- Turnaround: the average on a full report is under 8 hours on a business day. Say exactly that. No "fastest".
+- Experience: all but one affiliate started with no background check experience. Use it on the homepage and Brokers. Do not use it on Go Independent.
+- Demos: Brango's top salesperson (7+ years with Brango) joins an affiliate's first 10 demos at no charge. More are available after that.
+- Support is U.S.-based. Say that. Never say a competitor's support is offshore, and never name a competitor.
+- Fit: this takes 20 to 30 hours a week. Brango turns down people who want one more thing to own on the side.
+- First clients: nearly every affiliate's first client came from their own network. Use on the homepage only. Not on Go Independent, where a rep's network is their employer's client list.
+- Never on the site: license prices, owner financing, time-to-first-client, platform or affiliate revenue, any affiliate's name.
+- Buttons: "See the portal live" on the homepage and Go Independent ("See it live" in the phone header). "Book a call" on Brokers. All go to the same Google Calendar link.
 - Retention is written in words ("0 affiliates have ever left"), never as a percentage. Do not use "95%" or "100%". The videos still say 95% until they are re-recorded.
 - The one money fact allowed: Brango affiliates have sold books of business for 4–6X their yearly profit (EBITDA), and kept their companies. These were sales of client books, not of whole companies, so never write "partner businesses have sold". It always carries the fine print: "Based on past sales of books of business by Brango affiliates. Past results. Not a guarantee of future value." Never 3–5X. Never lead with it. No dollar amounts.
 - Brango is selective: "We don't license to everyone."
