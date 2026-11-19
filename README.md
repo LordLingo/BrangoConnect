@@ -76,3 +76,7 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 
 ## Blog
 - New post: copy `blog/_post-template.html`, then add a card to `blog/index.html`. Both already use the campaign look. Keep the class names (`blog-post`, `blog-body`, `blog-cta`, `blog-card`).
+
+## Phone menu
+
+Under 900px the header links collapse behind a menu button. `campaign.js` adds the button to any page that has a `.cp-nav`; the styles are at the end of `campaign.css`. No page markup is needed: add a link to `.cp-nav` and it shows on both desktop and phone. Every page was checked at 390px and 320px wide for sideways scrolling.
