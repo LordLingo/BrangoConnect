@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Brango//Live Webinar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:STANDARD
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:brango-live-webinar-2026@brangoconnect.com
+DTSTAMP:20261119T180000Z
+DTSTART;TZID=America/Chicago:20261130T130000
+DTEND;TZID=America/Chicago:20261130T133000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=MO
+SUMMARY:Brango Live Webinar: See the Portal
+LOCATION:https://meet.google.com/ohq-wegq-itj
+DESCRIPTION:Join: https://meet.google.com/ohq-wegq-itj\nEvery other Monda
+ y at 1:00 PM Central. We open the portal\, show how the back office work
+ s\, and answer questions.\nMore: https://www.brangoconnect.com/webinar.h
+ tml
+URL:https://meet.google.com/ohq-wegq-itj
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brango live webinar tomorrow at 1:00 PM Central
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Brango live webinar starts in 15 minutes
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
