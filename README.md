@@ -58,6 +58,12 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 2. In Formspree, allow the redirect to `https://brangoconnect.com/thank-you.html` if the project requires an allow-list. With JavaScript on, the site redirects itself after a successful POST.
 3. Earnings figures stay off the site. The 4–6X sale multiple above is the only verified money fact.
 
+## Webinar
+- `webinar.html` — registration for the live webinar, every other Monday at 1:00 PM Central. `webinar-thanks.html` is the confirmation (`noindex`).
+- The form posts to the shared Formspree endpoint with the subject "New Brango webinar registration" until Mark supplies a dedicated form code. Swap the `action` in `webinar.html` then.
+- The page does not show a specific date. Add one only when Mark confirms the first Monday.
+- Someone has to email registrants the date and join link. That is a manual step today.
+
 ## Legacy files
 `styles.css`, `brand-overrides.css`, `lead.css`, `launch-curtain.css`, `blog/blog.css`, `script.js` and `assets/launch-step-*.svg` are no longer loaded by any page. They are kept only in case something outside this repo still points at them. New work goes in `campaign.css` and `campaign.js`.
 

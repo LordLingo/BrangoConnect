@@ -406,3 +406,8 @@ body.cp{margin:0;font-family:var(--body);font-size:17px;line-height:1.55;color:v
 .cp .privacy-contact strong{color:#fff}
 .cp .privacy-contact a{color:#9fd2ff}
 .cp .privacy-back a{text-decoration:none}
+/* Webinar */
+.cp-form select{font:inherit;font-weight:400;padding:12px 14px;border-radius:10px;border:1px solid #c9d5e4;background:#fff;color:var(--ink);width:100%}
+.cp-page-head .cp-cols2{align-items:center}
+.cp-page-head .cp-form{color:var(--ink)}
+.cp-page-head a:not(.cp-btn),.cp-hero-note a{color:#fff}
