@@ -30,9 +30,9 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 - Technology page: white-label portal, ATS/HRIS integrations, API workflows, webhooks and browser candidate capture.
 
 ## Lead path
-- The goal of the homepage, Go Independent and Brokers is one action: **Book a call** (Google Calendar). Those three pages have no forms.
+- The goal of the homepage, Go Independent and Brokers is one action: **Book a call** (Google Calendar). Those pages have no forms.
 - "Prefer email?" links to info@brangoconnect.com.
-- The Formspree application form still lives on `about.html` and `whats-included.html`. Submitting redirects to `thank-you.html`.
+- One short form remains, on `about.html` ("Not ready for a call? Ask a question."). `campaign.js` posts it to Formspree and then goes to `thank-you.html`.
 - Older pages still link to `/#apply` and `/#contact`. Those anchors now sit on the homepage's closing "Book a call" section. Keep the ids `who`, `how`, `faq`, `clients`, `launch`, `apply`, `contact` on the homepage.
 - Guide: `guide.html` — "How to go independent in background screening." Printable, public URL.
 
@@ -41,7 +41,7 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 - `go-independent.html` — campaign page for background-check salespeople
 - `brokers.html` — campaign page for business brokers
 - `campaign.js` — reports booking clicks and video plays (`data-analytics`) to Vercel Web Analytics on the three campaign-look pages.
-- `campaign.css` — the new campaign-page design (one idea per screen, one button: Book a call). Used by `index.html`, `go-independent.html` and `brokers.html`. The inner pages (About, What's Included, Technology, Guide, Blog) still use the older stylesheets. The hero's "pieces" animation is inline SVG driven by this file.
+- `campaign.css` — the new campaign-page design (one idea per screen, one button: Book a call). Used by every page on the site. `privacy.html` also loads `privacy-policy.css` for its table and section spacing. The hero's "pieces" animation is inline SVG driven by this file.
 - `assets/video/` — self-hosted videos (720p), posters and captions. Fast Cut on Go Independent. The Binder on the homepage and Brokers.
 - `about.html` — facts only
 - `guide.html` — 1-page guide
@@ -57,3 +57,13 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 1. Enable Vercel Web Analytics on the project, or the `/_vercel/insights/script.js` request 404s.
 2. In Formspree, allow the redirect to `https://brangoconnect.com/thank-you.html` if the project requires an allow-list. With JavaScript on, the site redirects itself after a successful POST.
 3. Earnings figures stay off the site. The 4–6X sale multiple above is the only verified money fact.
+
+## Legacy files
+`styles.css`, `brand-overrides.css`, `lead.css`, `launch-curtain.css`, `blog/blog.css`, `script.js` and `assets/launch-step-*.svg` are no longer loaded by any page. They are kept only in case something outside this repo still points at them. New work goes in `campaign.css` and `campaign.js`.
+
+## Stories on the site
+- Founder quote (Go Independent, About) and the first-affiliate quote (homepage, About) are Mark Lingo's own words, approved by him on Nov 19 2026. Do not edit the wording without him.
+- The first affiliate is Mark's business partner. The quote says so. Never add his company name or any revenue figure.
+
+## Blog
+- New post: copy `blog/_post-template.html`, then add a card to `blog/index.html`. Both already use the campaign look. Keep the class names (`blog-post`, `blog-body`, `blog-cta`, `blog-card`).
