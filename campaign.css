@@ -170,3 +170,14 @@ body.cp{margin:0;font-family:var(--body);font-size:17px;line-height:1.55;color:v
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cp-btn,.cp-btn svg,.cp-faq summary svg{transition:none}}
 @media print{.cp-head,.cp-video{display:none}}
+
+/* Fit lists (brokers page) */
+.cp-fit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,56px)}
+.cp-fit h3{padding-bottom:14px;border-bottom:2px solid var(--blue-deep)}
+.cp-fit .is-no h3{border-color:#b6c2d4;color:var(--muted)}
+.cp-fit ul{list-style:none;margin:0;padding:0}
+.cp-fit li{display:flex;gap:12px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line);font-size:17px}
+.cp-fit li svg{width:20px;height:20px;flex:none;margin-top:3px;color:var(--blue)}
+.cp-fit .is-no li{color:var(--muted)}
+.cp-fit .is-no li svg{color:#8a98ad}
+@media (max-width:700px){.cp-fit{grid-template-columns:1fr}.cp-fit li{font-size:16px}}
