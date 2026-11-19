@@ -32,6 +32,7 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 ## Lead path
 - The goal of the homepage, Go Independent and Brokers is one action: **Book a call** (Google Calendar). Those pages have no forms.
 - "Prefer email?" links to info@brangoconnect.com.
+- Both forms (webinar sign-up and the About question) also send a copy to BrangoCRM (`https://www.brangocrm.com/api/intake`, see `toCrm` in `campaign.js`). The CRM files it under the right pipeline from the "I am" answer. It is best effort: Formspree stays the form of record, and a CRM failure never blocks the visitor.
 - One short form remains, on `about.html` ("Not ready for a call? Ask a question."). `campaign.js` posts it to Formspree and then goes to `thank-you.html`.
 - Older pages still link to `/#apply` and `/#contact`. Those anchors now sit on the homepage's closing "Book a call" section. Keep the ids `who`, `how`, `faq`, `clients`, `launch`, `apply`, `contact` on the homepage.
 - Guide: `guide.html` — "How to go independent in background screening." Printable, public URL.

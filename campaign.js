@@ -35,6 +35,22 @@
     } catch (e) { /* keep the fallback text */ }
   })();
 
+  /* Copy of the lead for BrangoCRM, so it lands in the right pipeline. Best effort:
+     the form itself still goes to Formspree, and a CRM failure never blocks the visitor. */
+  function toCrm(form) {
+    try {
+      var val = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el ? el.value : ''; };
+      var lead = {
+        form: /webinar/i.test(val('source')) ? 'webinar' : 'question',
+        name: val('name'), email: val('email'), phone: val('phone'),
+        i_am: val('i_am'), message: val('message'), _gotcha: val('_gotcha'), page: location.pathname
+      };
+      fetch('https://www.brangocrm.com/api/intake', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead), keepalive: true
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
   Array.prototype.forEach.call(document.querySelectorAll('form.js-lead-form'), function (form) {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
@@ -43,6 +59,7 @@
       var original = button ? button.innerHTML : '';
       if (button) { button.disabled = true; button.textContent = 'Sending…'; }
       if (status) { status.className = 'form-status'; status.textContent = ''; }
+      toCrm(form);
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
         .then(function (response) {
           if (!response.ok) throw new Error('Form submission failed');
