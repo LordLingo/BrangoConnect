@@ -17,6 +17,24 @@
   Array.prototype.forEach.call(document.querySelectorAll('video[data-analytics]'), function (v) {
     v.addEventListener('play', function () { send(v.getAttribute('data-analytics') + '-play'); }, { once: true });
   });
+  /* Next webinar date. First one is Monday 30 Nov 2026, then every 14 days, 1:00 PM Central.
+     Rolls to the following date once the 2 PM Central hour starts on a webinar day. */
+  (function () {
+    var slots = document.querySelectorAll('[data-next-webinar]');
+    if (!slots.length || !window.Intl) return;
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', hour12: false }).formatToParts(new Date());
+      var now = {};
+      parts.forEach(function (p) { now[p.type] = parseInt(p.value, 10); });
+      var today = Date.UTC(now.year, now.month - 1, now.day);
+      var next = Date.UTC(2026, 10, 30);
+      var step = 14 * 86400000;
+      while (next < today || (next === today && now.hour % 24 >= 14)) next += step;
+      var label = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', weekday: 'long', month: 'long', day: 'numeric' }).format(new Date(next));
+      Array.prototype.forEach.call(slots, function (el) { el.textContent = label + ' at 1:00 PM Central'; });
+    } catch (e) { /* keep the fallback text */ }
+  })();
+
   Array.prototype.forEach.call(document.querySelectorAll('form.js-lead-form'), function (form) {
     form.addEventListener('submit', function (event) {
       event.preventDefault();

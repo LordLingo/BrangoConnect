@@ -61,7 +61,7 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 ## Webinar
 - `webinar.html` — registration for the live webinar, every other Monday at 1:00 PM Central. `webinar-thanks.html` is the confirmation (`noindex`).
 - The form posts to the shared Formspree endpoint with the subject "New Brango webinar registration" until Mark supplies a dedicated form code. Swap the `action` in `webinar.html` then.
-- The page does not show a specific date. Add one only when Mark confirms the first Monday.
+- First webinar: Monday Nov 30 2026, then every 14 days. `campaign.js` fills any `[data-next-webinar]` element with the next date. Change the start date there if the schedule moves.
 - Someone has to email registrants the date and join link. That is a manual step today.
 
 ## Legacy files
