@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Brango Connect">
   <meta property="og:title" content="For Business Brokers | Brango">
-  <meta property="og:description" content="Have a buyer who hasn't found the right business? Show them one that's ready to run. Brango runs the back office.">
+  <meta property="og:description" content="Your buyer has the drive. We add the business. Brango runs the back office.">
   <meta property="og:url" content="https://www.brangoconnect.com/brokers.html">
   <meta property="og:image" content="https://www.brangoconnect.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -18,35 +18,21 @@
   <meta property="og:image:alt" content="Brango Connect. Own the company. We run the back office.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="For Business Brokers | Brango">
-  <meta name="twitter:description" content="Have a buyer who hasn't found the right business? Show them one that's ready to run. Brango runs the back office.">
+  <meta name="twitter:description" content="Your buyer has the drive. We add the business. Brango runs the back office.">
   <meta name="twitter:image" content="https://brangoconnect.com/assets/og-image.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#092768">
   <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="assets/icon-512.png" sizes="512x512" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="brand-overrides.css">
-  <link rel="stylesheet" href="lead.css">
-  <!-- Analytics: Vercel Web Analytics. Enable it in the Vercel project (Analytics tab).
-       Placeholder: [data-analytics] on links is ready for another vendor. None is configured. -->
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="campaign.css">
+  <!-- Analytics: Vercel Web Analytics. [data-analytics] marks the links worth tracking. -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Brango Connect",
-    "url": "https://www.brangoconnect.com/",
-    "logo": "https://www.brangoconnect.com/assets/brango-logo-stacked.png",
-    "email": "info@brangoconnect.com",
-    "telephone": "+1-866-773-5486"
-  }
-  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -65,23 +51,7 @@
         "name": "What does it cost my buyer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Brango is built to keep the cost of entry low: a one-time license covers the platform, the back office, and launch support. The full investment and fee schedule are shared on the buyer's discovery call. SBA financing is available for qualified buyers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does my buyer need background check experience?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Sales experience is the strong fit, in screening or in B2B. The buyer does not have to build the technology, answer every client call, or process the check."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where can my buyer operate?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Anywhere in the United States. There are no territories, protected zones, or zip-code limits."
+          "text": "Brango is built to keep the cost of entry low: a one-time license covers the platform, the back office, and launch support. The full investment and fee schedule are shared on the buyer's call. SBA financing is available for qualified buyers."
         }
       },
       {
@@ -89,7 +59,7 @@
         "name": "How does partnering work for my brokerage?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Referral terms are discussed on a call. Book a time or send the form and Brango replies by email."
+          "text": "Referral terms are discussed on a call. Book a time and we will walk you through it."
         }
       },
       {
@@ -104,124 +74,84 @@
   }
   </script>
 </head>
-<body>
-  <div class="topbar"><div class="shell topbar-inner"></div></div>
-
-  <header class="site-header" id="top">
-    <div class="shell nav-wrap">
-      <a class="brand brand-lockup" href="/" aria-label="Brango Connect home">
-        <img src="assets/brango-mark.png" alt="Brango">
-        <span class="brand-words"><strong>Brango</strong><em>Connect</em></span>
-      </a>
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
-      <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
-        <a href="#buyer">What Your Buyer Gets</a>
-        <a href="#fit">Who Fits</a>
-        <a href="#how">How It Works</a>
-        <a href="#faq">FAQ</a>
-        <a href="https://calendar.app.google/HRjFjbsaZtN8QM1H8" target="_blank" rel="noopener" data-analytics="nav-book">Book a call</a>
-        <a class="button button-small button-primary" href="#apply" data-analytics="nav-apply">Introduce a Buyer</a>
-      </nav>
+<body class="cp">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="cp-head">
+    <div class="cp-wrap">
+      <a class="cp-logo" href="/" aria-label="Brango Connect home"><img src="assets/brango-mark.png" alt="" width="38" height="38"><span><strong>Brango</strong> <em>Connect</em></span></a>
+      <a class="cp-btn cp-btn-light cp-btn-small" href="https://calendar.app.google/HRjFjbsaZtN8QM1H8" target="_blank" rel="noopener" data-analytics="nav-book">Book a call <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
     </div>
   </header>
-  <script src="/assets/brango-logo-animated.js"></script>
 
-  <main>
-    <section class="hero">
-      <div class="hero-grid"></div><div class="hero-glow glow-blue"></div><div class="hero-glow glow-sky"></div>
-      <div class="shell hero-layout">
-        <div class="hero-copy">
-          <div class="eyebrow"><i class="live-dot"></i> FOR BUSINESS BROKERS</div>
-          <h1>Have a buyer who hasn't<br>found the right business?<br><span>Show them one that's ready to run.</span></h1>
-          <p>Brango licenses a ready-to-run background screening company. We build the brand, the website and the toll-free number, and we run the back office. Your buyer owns the company and the client relationships.</p>
-          <div class="hero-form-card" id="apply">
-            <p class="guide-line">Tell us where to reply. <b>Referral terms are discussed on a call.</b></p>
-            <form class="js-lead-form hero-form" action="https://formspree.io/f/xgawroga" method="POST">
-              <input type="hidden" name="_subject" value="New Brango broker partner inquiry">
-              <input type="hidden" name="_next" value="https://brangoconnect.com/thank-you.html">
-              <input type="hidden" name="source" value="Brokers hero">
-              <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-              <div class="form-grid">
-                <label><span>Name *</span><input type="text" name="name" autocomplete="name" required></label>
-                <label><span>Email *</span><input type="email" name="email" autocomplete="email" required></label>
-                <label><span>Brokerage <em class="optional-mark">optional</em></span><input type="text" name="brokerage" autocomplete="organization"></label>
-                <label><span>Phone <em class="optional-mark">optional</em></span><input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
-                <label class="form-wide"><span>Message <em class="optional-mark">optional</em></span><input type="text" name="message" placeholder="Optional. The kind of buyer you have in mind."></label>
-              </div>
-              <button class="button button-primary button-large form-submit" type="submit">Introduce a Buyer <b>→</b></button>
-              <p class="next-steps">What happens next: Brango sends a short email reply to set up a call. Please don't send a buyer's personal details in this form.</p>
-              <div class="form-status" role="status" aria-live="polite"></div>
-            </form>
-            <a class="button button-secondary hero-book" href="https://calendar.app.google/HRjFjbsaZtN8QM1H8" target="_blank" rel="noopener" data-analytics="hero-book">Or book a call now</a>
-          </div>
+  <main id="main">
+    <section class="cp-hero">
+      <div class="cp-wrap">
+        <div class="cp-hero-copy">
+          <h1>Your buyer has the drive. We add the business.</h1>
+          <p class="cp-lede">For the buyer who passed on every listing. Brango licenses a ready-to-run background screening company and runs the back office.</p>
+          <a class="cp-btn cp-btn-light" href="https://calendar.app.google/HRjFjbsaZtN8QM1H8" target="_blank" rel="noopener" data-analytics="hero-book">Book a call <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+          <p class="cp-hero-note">One call. Referral terms are covered on it.</p>
         </div>
-        <div class="ownership-card reveal">
-          <h2>A business you can offer when the listings didn't fit.</h2>
-          <ul>
-            <li><i>✓</i><span>A new company under the buyer's own brand. Not a resale.</span></li>
-            <li><i>✓</i><span>A low cost of entry. SBA financing is available for qualified buyers.</span></li>
-            <li><i>✓</i><span>No storefront, no inventory, no support desk to staff.</span></li>
-            <li><i>✓</i><span>No territories. The entire United States is the market.</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="hero-wave"></div>
-    </section>
-
-    <section class="proof-band" aria-label="About Brango">
-      <div class="shell">
-        <div class="proof-row">
-          <div><strong>25+</strong><small>Years in background screening</small></div>
-          <div><strong>95%</strong><small>Partner retention</small></div>
-          <div><strong>50</strong><small>Affiliates</small></div>
-        </div>
-        <ul class="trust-strip">
-          <li>Built for FCRA-compliant screening: disclosure and authorization, adverse action, and disputes.</li>
-          <li>Brango is selective. We don't license to everyone.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="buyer">
-      <div class="shell">
-        <div class="section-heading centered reveal">
-          <h2>Your buyer owns the company. Brango runs the back office.</h2>
-          <p>Employers screen the people they hire, and they order again with each new hire. Your buyer sells to those employers. Brango does the work behind the sale.</p>
-        </div>
-        <div class="compare-grid spaced">
-          <article class="compare-card featured reveal">
-            <div class="compare-label">WHAT YOUR BUYER OWNS</div>
-            <h3>The company and the clients.</h3>
-            <ul>
-              <li><i>✓</i><span>Their own brand, website, logo and toll-free number, built by Brango.</span></li>
-              <li><i>✓</i><span>The client relationships. Clients see the buyer's company.</span></li>
-              <li><i>✓</i><span>A B2B client base that orders again each time it hires.</span></li>
-            </ul>
-          </article>
-          <article class="compare-card reveal">
-            <div class="compare-label">WHAT BRANGO RUNS</div>
-            <h3>Everything behind the sale.</h3>
-            <ul>
-              <li><i>✓</i><span>Brango answers the clients' calls and emails.</span></li>
-              <li><i>✓</i><span>Brango processes the full background check.</span></li>
-              <li><i>✓</i><span>Every order goes through one software portal that Brango built and owns.</span></li>
-            </ul>
-          </article>
-        </div>
-        <div class="exit-fact reveal">
-          <p class="exit-line">Brango partner businesses have sold for <strong>4–6X</strong> their yearly profit (EBITDA).</p>
-          <p class="exit-fine">Based on past sales of Brango partner businesses. Past results. Not a guarantee of future value.</p>
+        <div class="cp-hero-art">
+<svg class="pieces" viewBox="0 0 520 520" role="img" aria-labelledby="pieces-title pieces-desc" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif">
+<title id="pieces-title">Your buyer brings the drive. Brango adds the business.</title>
+<desc id="pieces-desc">Four blocks a buyer brings: drive, capital, sales skill and a network. They float over an empty outline where a business should be. Four Brango layers slide in: their brand, their portal, the back office and compliance. The label changes to Ready to Run.</desc>
+<ellipse cx="260.0" cy="436.0" rx="215" ry="52" fill="rgba(4,18,48,.28)" filter="url(#pblur)"/>
+<defs><filter id="pblur" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="16"/></filter></defs>
+<g class="pc-their"><polygon points="52.2,246.0 260.0,366.0 260.0,486.0 52.2,366.0" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.7)" stroke-width="1.5" stroke-dasharray="7 6" stroke-linejoin="round"/><polygon points="467.8,246.0 260.0,366.0 260.0,486.0 467.8,366.0" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.7)" stroke-width="1.5" stroke-dasharray="7 6" stroke-linejoin="round"/><polygon points="260.0,126.0 467.8,246.0 260.0,366.0 52.2,246.0" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.7)" stroke-width="1.5" stroke-dasharray="7 6" stroke-linejoin="round"/><text transform="matrix(0.8660,0.5,0,1,156.1,366.0)" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" letter-spacing=".12em" fill="#e6eefb">NO BUSINESS YET</text></g>
+<g class="pc-layer pc-layer-0"><polygon points="52.2,336.0 260.0,456.0 260.0,486.0 52.2,366.0" fill="#0d47a1" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><polygon points="467.8,336.0 260.0,456.0 260.0,486.0 467.8,366.0" fill="#0a3a86" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><polygon points="260.0,216.0 467.8,336.0 260.0,456.0 52.2,336.0" fill="#1976d2" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><text transform="matrix(0.8660,0.5,0,1,156.1,411.0)" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" letter-spacing=".1em" fill="#ffffff">COMPLIANCE</text></g>
+<g class="pc-layer pc-layer-1"><polygon points="52.2,306.0 260.0,426.0 260.0,456.0 52.2,336.0" fill="#1157b5" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><polygon points="467.8,306.0 260.0,426.0 260.0,456.0 467.8,336.0" fill="#0d47a1" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><polygon points="260.0,186.0 467.8,306.0 260.0,426.0 52.2,306.0" fill="#1e88e5" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><text transform="matrix(0.8660,0.5,0,1,156.1,381.0)" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" letter-spacing=".1em" fill="#ffffff">THE BACK OFFICE</text></g>
+<g class="pc-layer pc-layer-2"><polygon points="52.2,276.0 260.0,396.0 260.0,426.0 52.2,306.0" fill="#1565c0" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><polygon points="467.8,276.0 260.0,396.0 260.0,426.0 467.8,306.0" fill="#104f9e" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><polygon points="260.0,156.0 467.8,276.0 260.0,396.0 52.2,276.0" fill="#29a3f2" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><text transform="matrix(0.8660,0.5,0,1,156.1,351.0)" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" letter-spacing=".1em" fill="#ffffff">THEIR PORTAL</text></g>
+<g class="pc-layer pc-layer-3"><polygon points="52.2,246.0 260.0,366.0 260.0,396.0 52.2,276.0" fill="#1e7fe0" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><polygon points="467.8,246.0 260.0,366.0 260.0,396.0 467.8,276.0" fill="#1565c0" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><polygon points="260.0,126.0 467.8,246.0 260.0,366.0 52.2,246.0" fill="#4fc3f7" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-linejoin="round"/><text transform="matrix(0.8660,0.5,0,1,156.1,321.0)" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="700" letter-spacing=".1em" fill="#ffffff">THEIR BRAND</text></g>
+<g class="pc-yours">
+<g><polygon points="165.4,135.6 260.0,190.2 260.0,240.6 165.4,186.0" fill="#dbe9fb" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><polygon points="354.6,135.6 260.0,190.2 260.0,240.6 354.6,186.0" fill="#c3d9f6" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><polygon points="260.0,81.0 354.6,135.6 260.0,190.2 165.4,135.6" fill="#ffffff" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><text transform="matrix(0.8660,0.5,-0.8660,0.5,260.0,135.6)" text-anchor="middle" dominant-baseline="central" font-size="13.5" font-weight="700" fill="#0b2a63">Drive</text></g>
+<g><polygon points="269.4,195.6 363.9,250.2 363.9,300.6 269.4,246.0" fill="#dbe9fb" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><polygon points="458.5,195.6 363.9,250.2 363.9,300.6 458.5,246.0" fill="#c3d9f6" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><polygon points="363.9,141.0 458.5,195.6 363.9,250.2 269.4,195.6" fill="#ffffff" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><text transform="matrix(0.8660,0.5,-0.8660,0.5,363.9,195.6)" text-anchor="middle" dominant-baseline="central" font-size="13.5" font-weight="700" fill="#0b2a63">Capital</text></g>
+<g><polygon points="61.5,195.6 156.1,250.2 156.1,300.6 61.5,246.0" fill="#dbe9fb" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><polygon points="250.6,195.6 156.1,250.2 156.1,300.6 250.6,246.0" fill="#c3d9f6" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><polygon points="156.1,141.0 250.6,195.6 156.1,250.2 61.5,195.6" fill="#ffffff" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><text transform="matrix(0.8660,0.5,-0.8660,0.5,156.1,195.6)" text-anchor="middle" dominant-baseline="central" font-size="13.5" font-weight="700" fill="#0b2a63">Sales skill</text></g>
+<g><polygon points="165.4,255.6 260.0,310.2 260.0,360.6 165.4,306.0" fill="#dbe9fb" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><polygon points="354.6,255.6 260.0,310.2 260.0,360.6 354.6,306.0" fill="#c3d9f6" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><polygon points="260.0,201.0 354.6,255.6 260.0,310.2 165.4,255.6" fill="#ffffff" stroke="rgba(7,26,61,.18)" stroke-width="1" stroke-linejoin="round"/><text transform="matrix(0.8660,0.5,-0.8660,0.5,260.0,255.6)" text-anchor="middle" dominant-baseline="central" font-size="13.5" font-weight="700" fill="#0b2a63">A network</text></g>
+</g>
+<g class="pc-plate pc-plate-their"><rect x="162" y="17.6" width="196" height="34" rx="17" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.55)"/><text x="260" y="34.6" text-anchor="middle" dominant-baseline="central" font-size="12.5" font-weight="700" letter-spacing=".12em" fill="#e6eefb">LISTINGS DIDN&#8217;T FIT</text></g>
+<g class="pc-plate pc-plate-yours"><rect x="162" y="17.6" width="196" height="34" rx="17" fill="#ffffff"/><text x="260" y="34.6" text-anchor="middle" dominant-baseline="central" font-size="12.5" font-weight="800" letter-spacing=".12em" fill="#0d47a1">READY TO RUN</text></g>
+</svg>
         </div>
       </div>
     </section>
 
-    <section class="section video-section section-soft" id="watch">
-      <div class="shell">
-        <div class="section-heading centered reveal">
+    <section class="cp-proof" aria-label="About Brango">
+      <div class="cp-wrap">
+        <div class="cp-proof-row">
+          <div><strong>25+</strong><span>years in background screening</span></div>
+          <div><strong>95%</strong><span>partner retention</span></div>
+          <div><strong>50</strong><span>affiliates on the platform</span></div>
+        </div>
+        <p class="cp-proof-note">No territories. SBA financing is available for qualified buyers. Brango is selective: we don&#8217;t license to everyone.</p>
+      </div>
+    </section>
+
+    <section class="cp-sec" id="buyer">
+      <div class="cp-wrap">
+        <div class="cp-sec-head">
+          <h2>Your buyer owns it. Brango runs it.</h2>
+        </div>
+        <table class="cp-compare">
+          <thead>
+            <tr><th scope="col"><span class="skip">What</span></th><th scope="col" class="is-you">Your buyer</th><th scope="col">Brango</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">The company and the brand</th><td class="is-you"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Owns it</td><td>Builds it</td></tr>
+            <tr><th scope="row">The clients</th><td class="is-you"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Owns the relationships</td><td>Answers their calls and emails</td></tr>
+            <tr><th scope="row">Selling</th><td class="is-you"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Does it</td><td>Helps on the first demos</td></tr>
+            <tr><th scope="row">The background checks</th><td class="is-you"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Sells them</td><td>Processes every one</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="cp-sec cp-video" id="watch">
+      <div class="cp-wrap">
+        <div class="cp-sec-head cp-center">
           <h2>The 81-second version to send your buyer.</h2>
-          <p>What Brango builds, what Brango runs, and what stays theirs.</p>
         </div>
-        <figure class="video-frame reveal">
+        <figure class="cp-video-frame">
           <video controls preload="none" playsinline poster="assets/video/brango-the-binder-poster.jpg" data-analytics="brokers-video">
             <source src="assets/video/brango-the-binder.mp4" type="video/mp4">
             <track kind="captions" src="assets/video/brango-the-binder.vtt" srclang="en" label="English" default>
@@ -231,139 +161,110 @@
       </div>
     </section>
 
-    <section class="section" id="fit">
-      <div class="shell">
-        <div class="section-heading centered reveal">
+    <section class="cp-sec" id="fit">
+      <div class="cp-wrap">
+        <div class="cp-sec-head">
           <h2>The buyers this fits.</h2>
-          <p>The owner's job is growth. This works for a buyer who wants to sell and own, and not for one who wants a business that runs without them.</p>
+          <p>The owner&#8217;s job is growth. The owner sells.</p>
         </div>
-        <div class="broker-fit">
-          <article class="compare-card featured reveal">
-            <div class="compare-label">A STRONG FIT</div>
-            <h3>They can sell, and they want it to be theirs.</h3>
+        <div class="cp-fit">
+          <div>
+            <h3>A strong fit</h3>
             <ul>
-              <li><i>✓</i><span>B2B salespeople and sales leaders ready to own.</span></li>
-              <li><i>✓</i><span>Recruiting, staffing and HR professionals who know hiring.</span></li>
-              <li><i>✓</i><span>Career changers who want a service business with low overhead.</span></li>
-              <li><i>✓</i><span>Buyers who passed on listings because of price, staff or a storefront.</span></li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>B2B salespeople and sales leaders ready to own.</li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Recruiting, staffing and HR people who know hiring.</li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Buyers who passed on listings over price, staff or a storefront.</li>
             </ul>
-          </article>
-          <article class="compare-card reveal">
-            <div class="compare-label">NOT A FIT</div>
-            <h3>They want to stay out of the business.</h3>
+          </div>
+          <div class="is-no">
+            <h3>Not a fit</h3>
             <ul>
-              <li><i>—</i><span>A buyer looking for an absentee business.</span></li>
-              <li><i>—</i><span>A buyer who won't get on calls with business owners.</span></li>
-              <li><i>—</i><span>A buyer who needs an existing book of clients on day one.</span></li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 10h10"/></svg>A buyer who wants an absentee business.</li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 10h10"/></svg>A buyer who won&#8217;t get on calls with business owners.</li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 10h10"/></svg>A buyer who needs existing clients on day one.</li>
             </ul>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="how">
-      <div class="shell">
-        <div class="section-heading centered reveal">
-          <h2>Three steps from your introduction to a launched company.</h2>
-          <p>You make the introduction. Brango takes the calls about fit, what's included and the investment.</p>
+    <section class="cp-sec cp-sec-soft" id="how">
+      <div class="cp-wrap">
+        <div class="cp-sec-head">
+          <h2>Three steps from your introduction to a launch.</h2>
         </div>
-        <div class="timeline-grid broker-steps">
-          <article class="timeline-card reveal"><span>STEP 01</span><b>01</b><h3>Introduce your buyer</h3><ul><li>Book a call or send the form.</li><li>Brango replies by email to set up a time.</li><li>Referral terms are discussed on that call.</li></ul></article>
-          <article class="timeline-card reveal"><span>STEP 02</span><b>02</b><h3>Brango talks with the buyer</h3><ul><li>A discovery call covers fit, what's included and the investment.</li><li>Every buyer talks to a person.</li><li>If it is not a fit, Brango says so.</li></ul></article>
-          <article class="timeline-card reveal"><span>STEP 03</span><b>03</b><h3>The buyer launches</h3><ul><li>The branded portal and vendors are set up in weeks 1–2.</li><li>The buyer runs first demos with Brango's help in weeks 3–12.</li><li>Brango runs the back office from the first order.</li></ul></article>
-        </div>
+        <ol class="cp-steps">
+          <li>
+            <svg class="cp-step-art" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="14" width="44" height="40" rx="7"/><path d="M10 26h44M22 8v10M42 8v10M24 39l6 6 11-12"/></svg>
+            <span class="cp-step-n">STEP 1</span>
+            <h3>Introduce your buyer.</h3>
+            <p>Book a call. We cover how partnering works for your brokerage.</p>
+          </li>
+          <li>
+            <svg class="cp-step-art" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14h44v30H30l-12 10V44h-8z"/><path d="M22 26h20M22 34h12"/></svg>
+            <span class="cp-step-n">STEP 2</span>
+            <h3>We talk with the buyer.</h3>
+            <p>Fit, what&#8217;s included and the investment. If it&#8217;s not a fit, we say so.</p>
+          </li>
+          <li>
+            <svg class="cp-step-art" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 8l22 11-22 11-22-11z"/><path d="M10 31l22 11 22-11M10 43l22 11 22-11"/></svg>
+            <span class="cp-step-n">STEP 3</span>
+            <h3>The buyer launches.</h3>
+            <p>Brand and portal in weeks 1&#8211;2. First demos, with Brango&#8217;s help, in weeks 3&#8211;12.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="section faq-section" id="faq">
-      <div class="shell faq-layout">
-        <div class="faq-copy reveal">
-          <h2>What brokers usually ask.</h2>
-          <p>The buyer owns the company and the client relationships. Brango runs the back office. <a class="inline-link" href="/whats-included.html">See what's included</a>.</p>
+    <section class="cp-sec cp-exit" aria-label="What Brango partner businesses have sold for">
+      <div class="cp-wrap">
+        <div class="cp-exit-num">4&#8211;6X</div>
+        <p class="cp-exit-line">What Brango partner businesses have sold for, as a multiple of yearly profit (EBITDA).</p>
+        <p class="cp-exit-fine">Based on past sales of Brango partner businesses. Past results. Not a guarantee of future value.</p>
+      </div>
+    </section>
+
+    <section class="cp-sec" id="faq">
+      <div class="cp-wrap cp-faq">
+        <div class="cp-sec-head">
+          <h2>Four things brokers ask first.</h2>
         </div>
-        <div class="faq-list reveal">
+        <div>
           <details open>
-            <summary>Is this a business for sale?<span>+</span></summary>
-            <p>No. It is a license to launch a new background screening company under the buyer's own brand. Brango builds the brand, website and toll-free number, and runs the back office.</p>
+            <summary>Is this a business for sale?<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></summary>
+            <p>No. It is a license to launch a new background screening company under the buyer&#8217;s own brand. Brango builds the brand, website and toll-free number, and runs the back office.</p>
           </details>
           <details>
-            <summary>What does it cost my buyer?<span>+</span></summary>
-            <p>Brango is built to keep the cost of entry low: a one-time license covers the platform, the back office, and launch support. The full investment and fee schedule are shared on the buyer's discovery call. <a class="inline-link" href="/whats-included.html#financing">SBA financing is available</a> for qualified buyers.</p>
+            <summary>What does it cost my buyer?<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></summary>
+            <p>Brango is built to keep the cost of entry low: a one-time license covers the platform, the back office, and launch support. The full investment and fee schedule are shared on the buyer&#8217;s call. SBA financing is available for qualified buyers.</p>
           </details>
           <details>
-            <summary>Does my buyer need background check experience?<span>+</span></summary>
-            <p>No. Sales experience is the strong fit, in screening or in B2B. The buyer does not have to build the technology, answer every client call, or process the check.</p>
+            <summary>How does partnering work for my brokerage?<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></summary>
+            <p>Referral terms are discussed on a call. Book a time and we will walk you through it.</p>
           </details>
           <details>
-            <summary>Where can my buyer operate?<span>+</span></summary>
-            <p>Anywhere in the United States. There are no territories, protected zones, or zip-code limits.</p>
-          </details>
-          <details>
-            <summary>How does partnering work for my brokerage?<span>+</span></summary>
-            <p>Referral terms are discussed on a call. Book a time or send the form and Brango replies by email.</p>
-          </details>
-          <details>
-            <summary>Will Brango take every buyer I send?<span>+</span></summary>
+            <summary>Will Brango take every buyer I send?<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></summary>
             <p>No. Brango is selective and does not license to everyone. Every buyer gets a call about fit. If it is not a fit, Brango says so.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
-      <div class="shell contact-layout">
-        <div class="contact-copy reveal">
-          <h2>Have a buyer in mind? Start with a call.</h2>
-          <p>Name and email are required. Your brokerage, a phone number and a note are optional. Brango replies by email to set up a call.</p>
-          <p class="apply-note">Every introduction is read by a person. Please don't send a buyer's personal details in this form.</p>
-          <p class="contact-direct">Prefer email? <a href="mailto:info@brangoconnect.com">info@brangoconnect.com</a></p>
-          <p class="book-line">Prefer to talk first? <a href="https://calendar.app.google/HRjFjbsaZtN8QM1H8" target="_blank" rel="noopener" data-analytics="contact-book">Book a call</a></p>
-        </div>
-        <div class="contact-form-card reveal">
-          <form class="js-lead-form" action="https://formspree.io/f/xgawroga" method="POST">
-            <input type="hidden" name="_subject" value="New Brango broker partner inquiry">
-            <input type="hidden" name="_next" value="https://brangoconnect.com/thank-you.html">
-            <input type="hidden" name="source" value="Brokers bottom">
-            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="form-grid">
-              <label class="form-wide"><span>Name *</span><input type="text" name="name" autocomplete="name" required></label>
-              <label><span>Email *</span><input type="email" name="email" autocomplete="email" required></label>
-              <label><span>Brokerage <em class="optional-mark">optional</em></span><input type="text" name="brokerage" autocomplete="organization"></label>
-              <label class="form-wide"><span>Phone <em class="optional-mark">optional</em></span><input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
-              <label class="form-wide"><span>Message <em class="optional-mark">optional</em></span><textarea name="message" rows="3" placeholder="Optional. The kind of buyer you have in mind."></textarea></label>
-            </div>
-            <button class="button button-primary button-large form-submit" type="submit">Introduce a Buyer <b>→</b></button>
-            <p class="next-steps">What happens next: a short email reply to set up a call. Referral terms are discussed on that call.</p>
-            <div class="form-status" role="status" aria-live="polite"></div>
-          </form>
-        </div>
+    <section class="cp-sec cp-final" id="book">
+      <div class="cp-wrap">
+        <h2>Have a buyer in mind?</h2>
+        <p class="cp-lede">One call. We&#8217;ll tell you both if it&#8217;s a fit.</p>
+        <a class="cp-btn cp-btn-light" href="https://calendar.app.google/HRjFjbsaZtN8QM1H8" target="_blank" rel="noopener" data-analytics="final-book">Book a call <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+        <small>Prefer email? <a href="mailto:info@brangoconnect.com">info@brangoconnect.com</a></small>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="shell footer-grid">
-      <div class="footer-brand">
-        <a class="brand brand-lockup footer-lockup" href="/" aria-label="Brango Connect home">
-          <img src="assets/brango-mark.png" alt="Brango">
-          <span class="brand-words"><strong>Brango</strong><em>Connect</em></span>
-        </a>
-        <p>For business brokers with buyers who haven't found the right business.</p>
-        <p class="footer-book">Prefer to talk first? <a href="https://calendar.app.google/HRjFjbsaZtN8QM1H8" target="_blank" rel="noopener" data-analytics="footer-book">Book a call</a></p>
-      </div>
-      <div><b>For Brokers</b><a href="#buyer">What Your Buyer Gets</a><a href="#fit">Who Fits</a><a href="#how">How It Works</a><a href="#apply">Introduce a Buyer</a></div>
-      <div><b>Brango Connect</b><a href="/">Home</a><a href="about.html">About</a><a href="whats-included.html">What's Included</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy Policy</a><a href="mailto:info@brangoconnect.com">info@brangoconnect.com</a></div>
+  <footer class="cp-foot">
+    <div class="cp-wrap">
+      <span>© 2026 Brango Connect · 4261 E. University Dr. Suite 30-352, Prosper TX 75078 · <a href="tel:8667735486">866-773-5486</a></span>
+      <nav aria-label="Footer"><a href="/">Home</a><a href="whats-included.html">What&#8217;s Included</a><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><span>No earnings are guaranteed.</span></nav>
     </div>
-    <div class="shell footer-contact"><span>Brango · 4261 E. University Dr. Suite 30-352, Prosper TX 75078</span><a href="tel:8667735486">866-773-5486</a></div>
-    <div class="shell footer-bottom"><span>© 2026 Brango Connect. All rights reserved.</span><span>No earnings are guaranteed.</span></div>
   </footer>
-  <div class="apply-bar" data-apply-bar>
-    <p>Your buyer owns the company. Brango runs the back office.</p>
-    <div class="apply-bar-actions">
-      <a class="book-link" href="https://calendar.app.google/HRjFjbsaZtN8QM1H8" target="_blank" rel="noopener" data-analytics="sticky-book">Book a call</a>
-      <a class="button button-primary" href="#apply" data-analytics="apply-sticky">Introduce a Buyer</a>
-    </div>
-  </div>
-  <script src="script.js"></script>
 </body>
 </html>
