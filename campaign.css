@@ -411,3 +411,4 @@ body.cp{margin:0;font-family:var(--body);font-size:17px;line-height:1.55;color:v
 .cp-page-head .cp-cols2{align-items:center}
 .cp-page-head .cp-form{color:var(--ink)}
 .cp-page-head a:not(.cp-btn),.cp-hero-note a{color:#fff}
+.cp-page-head .cp-form a:not(.cp-btn){color:var(--blue)}
