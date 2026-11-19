@@ -35,6 +35,32 @@
     } catch (e) { /* keep the fallback text */ }
   })();
 
+  /* Phone menu: a button that opens the header links on small screens. */
+  (function () {
+    var head = document.querySelector('.cp-head');
+    var nav = head && head.querySelector('.cp-nav');
+    if (!nav) return;
+    if (!nav.id) nav.id = 'cp-nav';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'cp-menu-btn';
+    btn.setAttribute('aria-controls', nav.id);
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Menu');
+    btn.innerHTML = '<svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+    nav.parentNode.appendChild(btn);
+    head.classList.add('has-menu');
+    function set(open) {
+      head.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+    }
+    btn.addEventListener('click', function () { set(!head.classList.contains('is-open')); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && head.classList.contains('is-open')) { set(false); btn.focus(); } });
+    document.addEventListener('click', function (e) { if (head.classList.contains('is-open') && !head.contains(e.target)) set(false); });
+    nav.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a')) set(false); });
+  })();
+
   /* Copy of the lead for BrangoCRM, so it lands in the right pipeline. Best effort:
      the form itself still goes to Formspree, and a CRM failure never blocks the visitor. */
   function toCrm(form) {
