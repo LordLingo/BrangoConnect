@@ -28,6 +28,7 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 - `index.html` — homepage
 - `go-independent.html` — campaign page for background-check salespeople
 - `brokers.html` — campaign page for business brokers
+- `campaign.css` — the new campaign-page design (one idea per screen, one button: Book a call). Used by `go-independent.html` only for now. The hero's "pieces" animation is inline SVG driven by this file.
 - `assets/video/` — self-hosted videos (720p), posters and captions. Fast Cut on Go Independent. The Binder on the homepage and Brokers.
 - `about.html` — facts only
 - `guide.html` — 1-page guide
