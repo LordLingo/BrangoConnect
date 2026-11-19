@@ -62,7 +62,9 @@ Brango Connect is a business-opportunity site for people who already sell backgr
 - `webinar.html` — registration for the live webinar, every other Monday at 1:00 PM Central. `webinar-thanks.html` is the confirmation (`noindex`).
 - The form posts to the shared Formspree endpoint with the subject "New Brango webinar registration" until Mark supplies a dedicated form code. Swap the `action` in `webinar.html` then.
 - First webinar: Monday Nov 30 2026, then every 14 days. `campaign.js` fills any `[data-next-webinar]` element with the next date. Change the start date there if the schedule moves.
-- Someone has to email registrants the date and join link. That is a manual step today.
+- The webinar runs on Google Meet, as a recurring event on mark@brangoconnect.com (every other Monday from Nov 30 2026). One Meet link is reused every time.
+- After registering, `webinar-thanks.html` shows the Meet link, an "Add to Google Calendar" button and `assets/brango-webinar.ics` (with reminders one day and 15 minutes before). No email is sent to registrants.
+- If the Meet link or the schedule changes, update `webinar-thanks.html`, the `.ics` file and the start date in `campaign.js` together.
 
 ## Legacy files
 `styles.css`, `brand-overrides.css`, `lead.css`, `launch-curtain.css`, `blog/blog.css`, `script.js` and `assets/launch-step-*.svg` are no longer loaded by any page. They are kept only in case something outside this repo still points at them. New work goes in `campaign.css` and `campaign.js`.
