@@ -61,20 +61,16 @@
         <div class="cp-hero-copy">
           <h1>See the portal live, one to one.</h1>
           <p class="cp-lede">A private demo of the software your clients would order through. Your questions answered, and how the process works.</p>
-          <p class="cp-hero-note"><strong>Two quick steps.</strong> Tell us who you are, then pick a time on the next screen.</p>
+          <a class="cp-btn cp-btn-light" href="#book" data-analytics="portal-hero-book">Book a one-to-one <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+          <p class="cp-hero-note">Or scroll down and look inside first.</p>
         </div>
-        <form class="cp-form js-lead-form" id="book" action="https://formspree.io/f/xgawroga" method="POST" data-next="https://calendar.app.google/HRjFjbsaZtN8QM1H8">
-          <input type="hidden" name="_subject" value="New Brango one-to-one request">
-          <input type="hidden" name="_next" value="https://calendar.app.google/HRjFjbsaZtN8QM1H8">
-          <input type="hidden" name="source" value="One-to-one request">
-          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <label>Name<input type="text" name="name" autocomplete="name" required></label>
-          <label>Email<input type="email" name="email" autocomplete="email" required></label>
-          <label>I am<select name="i_am" required><option value="">Choose one</option><option>Selling background checks today</option><option>Looking for a business to own</option><option>A business broker</option><option>Something else</option></select></label>
-          <button class="cp-btn cp-btn-blue" type="submit">Pick a time <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></button>
-          <p class="cp-fine">Next you choose a day and time. We email you the overview to read before the call.</p>
-          <div class="form-status" role="status" aria-live="polite"></div>
-        </form>
+        <a class="cp-fan" href="#inside" aria-label="Look inside the portal" data-analytics="portal-fan">
+          <img class="cp-fan-1" src="assets/portal/clients.webp" alt="" width="2000" height="1029">
+          <img class="cp-fan-2" src="assets/portal/status.webp" alt="" width="2000" height="1125">
+          <img class="cp-fan-3" src="assets/portal/home.webp" alt="" width="2000" height="698">
+          <img class="cp-fan-4" src="assets/portal/order.webp" alt="" width="2000" height="1125">
+          <img class="cp-fan-5" src="assets/portal/report.webp" alt="" width="2000" height="1125">
+        </a>
       </div>
     </section>
 
@@ -105,6 +101,28 @@
           <li><span class="cp-step-n">THEN</span><h3>Your questions.</h3><p>The back office, the launch plan, cost and financing. Ask anything.</p></li>
           <li><span class="cp-step-n">AFTER</span><h3>Your startup packet.</h3><p>Every step to get in business, in writing.</p></li>
         </ol>
+      </div>
+    </section>
+
+    <section class="cp-sec cp-book">
+      <div class="cp-wrap cp-cols2">
+        <div class="cp-book-copy">
+          <h2>Ready to see it live?</h2>
+          <p class="cp-lede">Two quick steps. Tell us who you are, then pick a time on the next screen.</p>
+          <p>It is a private demo with your questions answered. We email you the overview to read before the call.</p>
+        </div>
+        <form class="cp-form js-lead-form" id="book" action="https://formspree.io/f/xgawroga" method="POST" data-next="https://calendar.app.google/HRjFjbsaZtN8QM1H8">
+          <input type="hidden" name="_subject" value="New Brango one-to-one request">
+          <input type="hidden" name="_next" value="https://calendar.app.google/HRjFjbsaZtN8QM1H8">
+          <input type="hidden" name="source" value="One-to-one request">
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label>Name<input type="text" name="name" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>I am<select name="i_am" required><option value="">Choose one</option><option>Selling background checks today</option><option>Looking for a business to own</option><option>A business broker</option><option>Something else</option></select></label>
+          <button class="cp-btn cp-btn-blue" type="submit">Pick a time <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></button>
+          <p class="cp-fine">Next you choose a day and time.</p>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
       </div>
     </section>
 
