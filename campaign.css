@@ -471,3 +471,24 @@ body.cp{margin:0;font-family:var(--body);font-size:17px;line-height:1.55;color:v
 .cp-shot figcaption strong{color:var(--ink)}
 .cp .cp-shots-cta{margin-top:clamp(28px,3vw,40px)}
 @media (max-width:760px){.cp-shots{grid-template-columns:1fr}}
+
+/* See the portal page: screenshots fanned like a hand of cards, and the form at the foot of the page. */
+.cp-fan{position:relative;display:block;width:100%;max-width:580px;aspect-ratio:10/7;margin-inline:auto}
+.cp-fan img{position:absolute;left:21%;top:17%;width:58%;aspect-ratio:16/10;height:auto;object-fit:cover;object-position:left top;border-radius:10px;border:1px solid rgba(255,255,255,.55);background:#fff;box-shadow:0 18px 40px rgba(3,12,34,.45);transform-origin:50% 135%;transition:transform .35s var(--ease)}
+.cp-fan-1{transform:rotate(-26deg)}
+.cp-fan-2{transform:rotate(-13deg)}
+.cp-fan-3{transform:rotate(0deg)}
+.cp-fan-4{transform:rotate(13deg)}
+.cp-fan-5{transform:rotate(26deg)}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .cp-fan:hover .cp-fan-1{transform:rotate(-31deg)}
+  .cp-fan:hover .cp-fan-2{transform:rotate(-15.5deg)}
+  .cp-fan:hover .cp-fan-4{transform:rotate(15.5deg)}
+  .cp-fan:hover .cp-fan-5{transform:rotate(31deg)}
+}
+.cp-book{background:var(--soft)}
+.cp-book .cp-cols2{align-items:center}
+.cp-book-copy{display:grid;gap:18px}
+.cp-book-copy p:not(.cp-lede){color:var(--muted)}
+#book{scroll-margin-top:96px}
+@media (max-width:900px){.cp-fan{max-width:440px;margin-top:8px}}
