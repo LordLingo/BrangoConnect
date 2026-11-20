@@ -67,7 +67,7 @@
     try {
       var val = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el ? el.value : ''; };
       var lead = {
-        form: /webinar/i.test(val('source')) ? 'webinar' : 'question',
+        form: /webinar/i.test(val('source')) ? 'webinar' : /one-to-one/i.test(val('source')) ? 'demo' : 'question',
         name: val('name'), email: val('email'), phone: val('phone'),
         i_am: val('i_am'), message: val('message'), _gotcha: val('_gotcha'), page: location.pathname
       };
