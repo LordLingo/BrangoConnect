@@ -435,3 +435,20 @@ body.cp{margin:0;font-family:var(--body);font-size:17px;line-height:1.55;color:v
   .cp-compare th,.cp-compare td{padding:12px 7px;overflow-wrap:anywhere}
   .cp-compare thead th{font-size:11px;letter-spacing:.04em}
 }
+
+/* White header: the logo mark is blue-on-white, so it needs a light bar behind it. */
+.cp-head{background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);box-shadow:0 1px 14px rgba(7,26,61,.06)}
+.cp-logo{color:var(--navy)!important}
+.cp-nav a{color:var(--blue-deep)}
+.cp-nav a:hover{background:#eaf2fd;color:var(--blue-deep)}
+.cp-nav a[aria-current="page"]{background:#e1edfc;color:var(--blue-deep)}
+.cp .cp-head a.cp-btn-light{background:var(--blue-deep);color:#fff;box-shadow:0 6px 16px rgba(13,71,161,.22)}
+.cp .cp-head a.cp-btn-light:hover{background:#0b3d8c;box-shadow:0 8px 20px rgba(13,71,161,.28)}
+.cp .cp-head :focus-visible{outline-color:var(--blue)}
+@media (max-width:900px){
+  .cp-menu-btn{border-color:#b9cdea;color:var(--blue-deep)}
+  .cp-menu-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  .cp-head.has-menu .cp-nav{background:#fff;border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(7,26,61,.14)}
+}
+.cp-logo img{width:44px;height:44px}
+@media (max-width:640px){.cp-logo img{width:36px;height:36px}}
