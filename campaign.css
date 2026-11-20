@@ -452,3 +452,11 @@ body.cp{margin:0;font-family:var(--body);font-size:17px;line-height:1.55;color:v
 }
 .cp-logo img{width:44px;height:44px}
 @media (max-width:640px){.cp-logo img{width:36px;height:36px}}
+
+/* Gold accent: every button that books a call or asks for a demo. Other buttons keep their colours. */
+.cp a.cp-btn[href$="see-the-portal.html"],.cp .cp-head a.cp-btn[href$="see-the-portal.html"],
+.cp a.cp-btn[href="#book"],.cp .cp-head a.cp-btn[href="#book"],
+.cp #book button.cp-btn{background:#FBBF24;color:#103C93;box-shadow:0 10px 26px rgba(245,158,11,.30)}
+.cp a.cp-btn[href$="see-the-portal.html"]:hover,.cp .cp-head a.cp-btn[href$="see-the-portal.html"]:hover,
+.cp a.cp-btn[href="#book"]:hover,.cp .cp-head a.cp-btn[href="#book"]:hover,
+.cp #book button.cp-btn:hover{background:#F59E0B;color:#103C93;box-shadow:0 12px 30px rgba(245,158,11,.38)}
