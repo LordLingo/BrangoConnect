@@ -460,3 +460,14 @@ body.cp{margin:0;font-family:var(--body);font-size:17px;line-height:1.55;color:v
 .cp a.cp-btn[href$="see-the-portal.html"]:hover,.cp .cp-head a.cp-btn[href$="see-the-portal.html"]:hover,
 .cp a.cp-btn[href="#book"]:hover,.cp .cp-head a.cp-btn[href="#book"]:hover,
 .cp #book button.cp-btn:hover{background:#F59E0B;color:#103C93;box-shadow:0 12px 30px rgba(245,158,11,.38)}
+
+/* Portal screenshots on the See the portal page. */
+.cp-shots{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,36px);margin-top:clamp(24px,3vw,40px)}
+.cp-shot{margin:0;display:grid;gap:12px;align-content:start}
+.cp-shot:first-child{grid-column:1 / -1}
+.cp-shot a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 44px rgba(15,40,80,.10);background:#fff}
+.cp-shot img{display:block;width:100%;height:auto}
+.cp-shot figcaption{font-size:16px;color:var(--muted)}
+.cp-shot figcaption strong{color:var(--ink)}
+.cp .cp-shots-cta{margin-top:clamp(28px,3vw,40px)}
+@media (max-width:760px){.cp-shots{grid-template-columns:1fr}}
