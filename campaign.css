@@ -531,3 +531,10 @@ body.cp{margin:0;font-family:var(--body);font-size:17px;line-height:1.55;color:v
 @media (max-width:420px){.cp-calc-rows{grid-template-columns:1fr}.cp-calc-out .cp-btn{width:100%;justify-content:center}}
 @media (prefers-reduced-motion:reduce){.cp-calc-track i{transition:none}}
 @media print{.cp-calc-in input[type=range]{display:none}}
+
+/* Hero button pair (Go Independent): gold demo button plus a quiet jump to the calculator. */
+.cp-hero-btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cp a.cp-btn-ghost{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.55)}
+.cp a.cp-btn-ghost:hover{background:rgba(255,255,255,.2);transform:translateY(-1px)}
+.cp a.cp-btn-ghost:hover svg{transform:none}
+@media (max-width:480px){.cp-hero-btns{width:100%}.cp-hero-btns .cp-btn{flex:1 1 100%;justify-content:center}}
