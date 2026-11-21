@@ -9,6 +9,11 @@
       "source": "/pricing",
       "destination": "/whats-included.html",
       "statusCode": 301
+    },
+    {
+      "source": "/numbers",
+      "destination": "/go-independent.html?utm_source=linkedin&utm_medium=dm&utm_campaign=sales-reps#calculator",
+      "statusCode": 302
     }
   ]
 }
