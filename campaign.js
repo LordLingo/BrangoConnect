@@ -10,6 +10,12 @@
     if (extra) for (var k in extra) data[k] = extra[k];
     window.va('event', { name: name, data: data });
   }
+  /* Tagged arrivals (short links such as /numbers add utm_source). Reported once per page load
+     so LinkedIn clicks can be told apart from direct visits. */
+  try {
+    var src = new URLSearchParams(location.search).get('utm_source');
+    if (src) send('arrive-' + src.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 24));
+  } catch (e) {}
   document.addEventListener('click', function (e) {
     var el = e.target.closest ? e.target.closest('a[data-analytics]') : null;
     if (el) send(el.getAttribute('data-analytics'));
