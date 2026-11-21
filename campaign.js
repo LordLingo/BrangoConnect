@@ -61,6 +61,51 @@
     nav.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a')) set(false); });
   })();
 
+  /* Rep calculator (Go Independent). Job income vs owning the same book at 50% profit,
+     and what that book is worth at 4X yearly profit. All from the visitor's own numbers. */
+  var calcMath = function (income, book, years) {
+    var own = Math.round(book * 0.5);
+    return { job: income, own: own, month: Math.round(own / 12), gap: own - income,
+             jobTotal: income * years, ownTotal: own * years, sale: own * 4 };
+  };
+  if (typeof module !== 'undefined' && module.exports) module.exports = { calcMath: calcMath };
+  (function () {
+    var root = document.querySelector('[data-calc]');
+    if (!root) return;
+    var money = function (n) { return (n < 0 ? '-$' : '$') + Math.abs(Math.round(n)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); };
+    var digits = function (v) { var n = parseInt(String(v).replace(/[^0-9]/g, ''), 10); return isNaN(n) ? 0 : Math.min(n, 99999999); };
+    var q = function (sel) { return root.querySelectorAll(sel); };
+    var text = function (key, value) { Array.prototype.forEach.call(q('[data-calc="' + key + '"]'), function (el) { el.textContent = value; }); };
+    var field = function (name) { return root.querySelector('[data-calc-input="' + name + '"]'); };
+    var range = function (name) { return root.querySelector('[data-calc-range="' + name + '"]'); };
+    var used = false;
+    function render() {
+      var years = parseInt(range('years').value, 10) || 1;
+      var r = calcMath(digits(field('income').value), digits(field('book').value), years);
+      var top = Math.max(r.job, r.own, 1);
+      root.querySelector('[data-calc-bar="job"]').style.width = (r.job / top * 100).toFixed(2) + '%';
+      root.querySelector('[data-calc-bar="own"]').style.width = (r.own / top * 100).toFixed(2) + '%';
+      text('job', money(r.job)); text('own', money(r.own)); text('month', money(r.month));
+      text('gap', money(Math.abs(r.gap)));
+      text('gap-label', r.gap > 0 ? 'more a year as the owner.' : r.gap < 0 ? 'more a year in the job, at this size. The gap closes as the book grows.' : 'difference at this size.');
+      text('years', years + (years === 1 ? ' year' : ' years')); text('years-out', String(years));
+      text('job-total', money(r.jobTotal)); text('own-total', money(r.ownTotal)); text('sale', money(r.sale));
+    }
+    function touched() { if (!used) { used = true; send('calc-use'); } }
+    ['income', 'book'].forEach(function (name) {
+      var f = field(name), s = range(name);
+      f.addEventListener('input', function () {
+        var n = digits(f.value);
+        f.value = n ? n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : '';
+        s.value = Math.max(+s.min, Math.min(+s.max, n));
+        touched(); render();
+      });
+      s.addEventListener('input', function () { f.value = money(+s.value).slice(1); touched(); render(); });
+    });
+    range('years').addEventListener('input', function () { touched(); render(); });
+    render();
+  })();
+
   /* Copy of the lead for BrangoCRM, so it lands in the right pipeline. Best effort:
      the form itself still goes to Formspree, and a CRM failure never blocks the visitor. */
   function toCrm(form) {

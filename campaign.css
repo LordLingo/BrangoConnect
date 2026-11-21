@@ -492,3 +492,42 @@ body.cp{margin:0;font-family:var(--body);font-size:17px;line-height:1.55;color:v
 .cp-book-copy p:not(.cp-lede){color:var(--muted)}
 #book{scroll-margin-top:96px}
 @media (max-width:900px){.cp-fan{max-width:440px;margin-top:8px}}
+
+/* Rep calculator (Go Independent): the visitor's own numbers, job vs owning the book. */
+.cp-calc-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:24px;align-items:stretch}
+.cp-calc-in{display:grid;gap:26px;align-content:start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3vw,34px)}
+.cp-calc-in,.cp-calc-out{min-width:0;grid-template-columns:minmax(0,1fr)}
+.cp-calc-field{display:grid;gap:10px;grid-template-columns:minmax(0,1fr);min-width:0}
+.cp-calc-field label{font-weight:650;font-size:16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.cp-calc-field output{font-family:var(--display);font-size:26px;font-weight:500;color:var(--blue-deep);font-variant-numeric:tabular-nums}
+.cp-calc-money{display:flex;align-items:center;gap:6px;border:1.5px solid #c9d6e8;border-radius:12px;padding:0 14px;background:#fff}
+.cp-calc-money:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px #bfdbfe}
+.cp-calc-money span{font-family:var(--display);font-size:24px;color:var(--muted)}
+.cp-calc-money input{flex:1;min-width:0;border:0;outline:0;background:none;padding:12px 0;font:500 26px/1.1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.cp-calc-hint{font-size:13.5px;color:var(--muted)}
+.cp-calc input[type=range]{width:100%;height:28px;margin:0;accent-color:#F59E0B;cursor:pointer}
+.cp-calc-out{display:grid;gap:20px;align-content:start;justify-items:start;color:#fff;border-radius:20px;padding:clamp(22px,3.4vw,40px);background:radial-gradient(520px 300px at 90% 0%,rgba(79,195,247,.28),transparent 65%),linear-gradient(180deg,#092768,#0f48ad)}
+.cp-calc-bar{display:grid;gap:6px;width:100%}
+.cp-calc-label{font-size:14px;letter-spacing:.02em;color:#c4d7f5}
+.cp-calc-track{display:block;height:14px;border-radius:7px;background:rgba(255,255,255,.12);overflow:hidden}
+.cp-calc-track i{display:block;height:100%;min-width:6px;border-radius:7px;background:#aab6c8;transition:width .5s var(--ease)}
+.cp-calc-bar.is-own .cp-calc-track i{background:linear-gradient(90deg,#F59E0B,#FCD34D)}
+.cp-calc-val{font-size:15px;color:#dbe8fb}
+.cp-calc-val strong{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.2vw,36px);letter-spacing:-.02em;color:#fff;font-variant-numeric:tabular-nums;margin-right:4px}
+.cp-calc-bar.is-own .cp-calc-val strong{color:#FCD34D}
+.cp-calc-val em{font-style:normal;white-space:nowrap}
+.cp-calc-gap{font-family:var(--display);font-size:clamp(20px,2.3vw,26px);line-height:1.25}
+.cp-calc-gap strong{font-weight:600;color:#FCD34D;font-variant-numeric:tabular-nums}
+.cp-calc-rows{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;margin:0}
+.cp-calc-rows div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 16px;display:grid;gap:4px}
+.cp-calc-rows dt{font-size:13.5px;color:#c4d7f5}
+.cp-calc-rows dd{margin:0;font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-variant-numeric:tabular-nums}
+.cp-calc-rows .is-own dd{color:#FCD34D}
+.cp-calc-sale{width:100%;display:grid;gap:2px;border-top:1px solid rgba(255,255,255,.2);padding-top:18px}
+.cp-calc-sale span{font-size:14.5px;color:#c4d7f5}
+.cp-calc-sale strong{font-family:var(--display);font-weight:300;font-size:clamp(46px,7vw,84px);line-height:1;letter-spacing:-.035em;color:#FCD34D;font-variant-numeric:tabular-nums}
+.cp-calc-fine{margin-top:22px!important;font-size:13px;line-height:1.5;color:var(--muted);max-width:70em}
+@media (max-width:900px){.cp-calc-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:420px){.cp-calc-rows{grid-template-columns:1fr}.cp-calc-out .cp-btn{width:100%;justify-content:center}}
+@media (prefers-reduced-motion:reduce){.cp-calc-track i{transition:none}}
+@media print{.cp-calc-in input[type=range]{display:none}}

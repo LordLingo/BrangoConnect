@@ -207,6 +207,58 @@
       </div>
     </section>
 
+    <section class="cp-sec cp-sec-soft cp-calc" id="calculator" aria-labelledby="calc-title">
+      <div class="cp-wrap">
+        <div class="cp-sec-head">
+          <h2 id="calc-title">Run your own numbers.</h2>
+          <p>Same book. See what changes when you own it.</p>
+        </div>
+        <div class="cp-calc-grid" data-calc>
+          <form class="cp-calc-in" novalidate onsubmit="return false">
+            <div class="cp-calc-field">
+              <label for="calc-income">What you earn a year</label>
+              <div class="cp-calc-money"><span aria-hidden="true">$</span><input id="calc-income" type="text" inputmode="numeric" autocomplete="off" maxlength="11" value="85,000" data-calc-input="income"></div>
+              <input type="range" min="30000" max="400000" step="5000" value="85000" aria-label="What you earn a year, slider" data-calc-range="income">
+            </div>
+            <div class="cp-calc-field">
+              <label for="calc-book">What your accounts bill a year</label>
+              <div class="cp-calc-money"><span aria-hidden="true">$</span><input id="calc-book" type="text" inputmode="numeric" autocomplete="off" maxlength="11" value="600,000" data-calc-input="book"></div>
+              <input type="range" min="100000" max="3000000" step="25000" value="600000" aria-label="What your accounts bill a year, slider" data-calc-range="book">
+              <p class="cp-calc-hint">The size of the book you&#8217;ve built.</p>
+            </div>
+            <div class="cp-calc-field">
+              <label for="calc-years">Years <output for="calc-years" data-calc="years-out">5</output></label>
+              <input id="calc-years" type="range" min="1" max="10" step="1" value="5" data-calc-range="years">
+            </div>
+          </form>
+          <div class="cp-calc-out" aria-live="polite">
+            <div class="cp-calc-bar">
+              <span class="cp-calc-label">Selling for someone else</span>
+              <span class="cp-calc-track"><i data-calc-bar="job" style="width:28.33%"></i></span>
+              <span class="cp-calc-val"><strong data-calc="job">$85,000</strong> a year</span>
+            </div>
+            <div class="cp-calc-bar is-own">
+              <span class="cp-calc-label">Owning that book, at 50% profit</span>
+              <span class="cp-calc-track"><i data-calc-bar="own" style="width:100%"></i></span>
+              <span class="cp-calc-val"><strong data-calc="own">$300,000</strong> a year <em>(<span data-calc="month">$25,000</span> a month)</em></span>
+            </div>
+            <p class="cp-calc-gap"><strong data-calc="gap">$215,000</strong> <span data-calc="gap-label">more a year as the owner.</span></p>
+            <dl class="cp-calc-rows">
+              <div><dt>Over <span data-calc="years">5 years</span>, the job</dt><dd data-calc="job-total">$425,000</dd></div>
+              <div class="is-own"><dt>Over <span data-calc="years">5 years</span>, the owner</dt><dd data-calc="own-total">$1,500,000</dd></div>
+            </dl>
+            <div class="cp-calc-sale">
+              <span>And the book is yours to sell</span>
+              <strong data-calc="sale">$1,200,000</strong>
+              <span>at 4X yearly profit. Brango affiliates have sold books for 4&#8211;6X.</span>
+            </div>
+            <a class="cp-btn cp-btn-light" href="see-the-portal.html" data-analytics="calc-book">See the portal live <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+          </div>
+        </div>
+        <p class="cp-calc-fine">An illustration built from the numbers you enter. Not a promise of earnings. It assumes half of what the book bills is profit and that the book holds steady. It leaves out the license, your own costs and taxes, and the time it takes to build a book. The 4X comes from past sales of books of business by Brango affiliates. Past results. Not a guarantee of future value. This is about a book you build for your own company, not an employer&#8217;s accounts.</p>
+      </div>
+    </section>
+
     <section class="cp-sec cp-exit" aria-label="What Brango affiliates have sold books of business for">
       <div class="cp-wrap">
         <h2 class="cp-exit-head">You own it. So you have something to sell.</h2>
