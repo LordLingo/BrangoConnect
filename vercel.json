@@ -14,6 +14,21 @@
       "source": "/numbers",
       "destination": "/go-independent.html?utm_source=linkedin&utm_medium=dm&utm_campaign=sales-reps#calculator",
       "statusCode": 302
+    },
+    {
+      "source": "/live",
+      "destination": "/webinar.html?utm_source=email&utm_medium=cold&utm_campaign=brango-staffing",
+      "statusCode": 302
+    },
+    {
+      "source": "/live-testing",
+      "destination": "/webinar.html?utm_source=email&utm_medium=cold&utm_campaign=brango-drug-testing",
+      "statusCode": 302
+    },
+    {
+      "source": "/pass-along",
+      "destination": "/webinar.html?utm_source=broker&utm_medium=forward&utm_campaign=brango-brokers",
+      "statusCode": 302
     }
   ]
 }
