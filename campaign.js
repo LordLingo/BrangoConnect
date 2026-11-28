@@ -16,6 +16,38 @@
     var src = new URLSearchParams(location.search).get('utm_source');
     if (src) send('arrive-' + src.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 24));
   } catch (e) {}
+
+  /* Where this visitor first came from, kept for 30 days in this browser only, so a sign-up a few
+     pages (or days) later still says which email, post or forward brought them. First touch wins:
+     a later visit doesn't overwrite it. utm tags if the link had them, else the other site that
+     linked here. Nothing personal, and the browser may refuse storage: then it's just this visit. */
+  var ORIGIN_KEY = 'bc_origin', ORIGIN_DAYS = 30;
+  var origin = (function () {
+    var saved = null;
+    try { saved = JSON.parse(localStorage.getItem(ORIGIN_KEY) || 'null'); } catch (e) {}
+    if (saved && saved.t && Date.now() - saved.t < ORIGIN_DAYS * 86400000) return saved;
+    var now = null;
+    try {
+      var q = new URLSearchParams(location.search);
+      var ref = document.referrer && new URL(document.referrer);
+      var external = ref && ref.hostname.replace(/^www\./, '') !== location.hostname.replace(/^www\./, '');
+      if (q.get('utm_source')) {
+        now = { s: q.get('utm_source'), m: q.get('utm_medium') || '', c: q.get('utm_campaign') || '', r: external ? ref.href : '' };
+      } else if (external) {
+        now = { s: '', m: '', c: '', r: ref.href };
+      }
+    } catch (e) {}
+    if (!now) return null;
+    now.t = Date.now();
+    try { localStorage.setItem(ORIGIN_KEY, JSON.stringify(now)); } catch (e) {}
+    return now;
+  })();
+  /** One readable line for the form's email, e.g. "email / cold / brango-staffing" or "linkedin.com". */
+  function originLabel() {
+    if (!origin) return '';
+    if (origin.s) return [origin.s, origin.m, origin.c].filter(Boolean).join(' / ');
+    try { return new URL(origin.r).hostname.replace(/^www\./, ''); } catch (e) { return ''; }
+  }
   document.addEventListener('click', function (e) {
     var el = e.target.closest ? e.target.closest('a[data-analytics]') : null;
     if (el) send(el.getAttribute('data-analytics'));
@@ -122,6 +154,12 @@
         name: val('name'), email: val('email'), phone: val('phone'),
         i_am: val('i_am'), message: val('message'), _gotcha: val('_gotcha'), page: location.pathname
       };
+      if (origin) {
+        lead.utm_source = origin.s || undefined;
+        lead.utm_medium = origin.m || undefined;
+        lead.utm_campaign = origin.c || undefined;
+        lead.referrer = origin.r || undefined;
+      }
       fetch('https://www.brangocrm.com/api/intake', {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead), keepalive: true
       }).catch(function () {});
@@ -137,7 +175,10 @@
       if (button) { button.disabled = true; button.textContent = 'Sending…'; }
       if (status) { status.className = 'form-status'; status.textContent = ''; }
       toCrm(form);
-      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      var data = new FormData(form);
+      var cameFrom = originLabel();
+      if (cameFrom) data.append('came_from', cameFrom);
+      fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
         .then(function (response) {
           if (!response.ok) throw new Error('Form submission failed');
           var source = form.querySelector('[name="source"]');
